@@ -60,4 +60,15 @@ function setActiveNavLink() {
   });
 }
 
+
+document.addEventListener("DOMContentLoaded", async () => {
+  const targets = document.querySelectorAll("[data-include]");
+
+  for (const el of targets) {
+    const file = el.getAttribute("data-include");
+    const res = await fetch(file);
+    el.innerHTML = await res.text();
+  }
+});
+
 document.addEventListener('DOMContentLoaded', injectPartials);
