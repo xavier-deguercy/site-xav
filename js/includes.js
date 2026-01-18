@@ -2,32 +2,24 @@
   =============================================================
   includes.js
   -------------------------------------------------------------
-  Objectif : éviter de dupliquer le même header/footer sur
-  toutes les pages (logique "modulaire" comme en Python).
-
-  Fonctionnement :
-  - dans tes pages, tu mets :
-      <div data-include="partials/header.html"></div>
-      <div data-include="partials/footer.html"></div>
-  - ce script fetch les fichiers et injecte le HTML.
+  Objectif : injecter des "partials" (header/footer) dans
+  les pages, pour éviter les copier-coller.
 
   IMPORTANT :
-  - fetch NE marche pas en file:// sur beaucoup de navigateurs.
-    -> utilise VSCode Live Server OU :
-       python -m http.server 8000
-       puis ouvre http://localhost:8000
+  - ça fonctionne uniquement via http:// (Live Server / python -m http.server)
+  - pas en file:// (double-clic sur le fichier)
   =============================================================
 */
 
 async function injectPartials() {
-  const targets = document.querySelectorAll('[data-include]');
+  const targets = document.querySelectorAll("[data-include]");
 
   for (const el of targets) {
-    const file = el.getAttribute('data-include');
+    const file = el.getAttribute("data-include");
     if (!file) continue;
 
     try {
-      const res = await fetch(file, { cache: 'no-cache' });
+      const res = await fetch(file, { cache: "no-cache" });
       if (!res.ok) {
         el.innerHTML = `<!-- include failed: ${file} (${res.status}) -->`;
         continue;
@@ -38,37 +30,27 @@ async function injectPartials() {
     }
   }
 
-  // Une fois le header injecté, on peut marquer la page active dans le menu.
+  // Une fois le header injecté, on peut marquer le lien actif
   setActiveNavLink();
 }
 
 function setActiveNavLink() {
-  // ex: /xav-portfolio/portfolio.html -> portfolio.html
-  const current = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
+  // Nom du fichier courant (ex: portfolio.html)
+  const current = (location.pathname.split("/").pop() || "index.html").toLowerCase();
 
-  document.querySelectorAll('a[data-nav]').forEach((a) => {
-    const target = (a.getAttribute('data-nav') || '').toLowerCase();
+  // On regarde tous les liens du header injecté
+  document.querySelectorAll(".nav a").forEach((a) => {
+    const href = a.getAttribute("href") || "";
+    const target = href.split("#")[0].split("/").pop().toLowerCase(); // retire l'ancre
 
-    if (target === current) {
-      a.classList.add('active');
-      a.classList.add('nav-link');
-      a.setAttribute('aria-current', 'page');
+    if (target && target === current) {
+      a.classList.add("active");
+      a.setAttribute("aria-current", "page");
     } else {
-      a.classList.add('nav-link');
-      a.removeAttribute('aria-current');
+      a.classList.remove("active");
+      a.removeAttribute("aria-current");
     }
   });
 }
 
-
-document.addEventListener("DOMContentLoaded", async () => {
-  const targets = document.querySelectorAll("[data-include]");
-
-  for (const el of targets) {
-    const file = el.getAttribute("data-include");
-    const res = await fetch(file);
-    el.innerHTML = await res.text();
-  }
-});
-
-document.addEventListener('DOMContentLoaded', injectPartials);
+document.addEventListener("DOMContentLoaded", injectPartials);
