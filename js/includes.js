@@ -1,14 +1,8 @@
 /*
-  =============================================================
   includes.js
-  -------------------------------------------------------------
-  Objectif : injecter des "partials" (header/footer) dans
-  les pages, pour éviter les copier-coller.
-
-  IMPORTANT :
-  - ça fonctionne uniquement via http:// (Live Server / python -m http.server)
-  - pas en file:// (double-clic sur le fichier)
-  =============================================================
+  - Injecte partials/header.html et partials/footer.html
+  - Met le lien actif dans le menu
+  - Met à jour l'année si <span id="year"></span> existe
 */
 
 async function injectPartials() {
@@ -25,23 +19,21 @@ async function injectPartials() {
         continue;
       }
       el.innerHTML = await res.text();
-    } catch (err) {
+    } catch {
       el.innerHTML = `<!-- include error: ${file} -->`;
     }
   }
 
-  // Une fois le header injecté, on peut marquer le lien actif
   setActiveNavLink();
+  setYear();
 }
 
 function setActiveNavLink() {
-  // Nom du fichier courant (ex: portfolio.html)
   const current = (location.pathname.split("/").pop() || "index.html").toLowerCase();
 
-  // On regarde tous les liens du header injecté
   document.querySelectorAll(".nav a").forEach((a) => {
-    const href = a.getAttribute("href") || "";
-    const target = href.split("#")[0].split("/").pop().toLowerCase(); // retire l'ancre
+    const href = (a.getAttribute("href") || "").split("#")[0];
+    const target = href.split("/").pop().toLowerCase();
 
     if (target && target === current) {
       a.classList.add("active");
@@ -51,6 +43,11 @@ function setActiveNavLink() {
       a.removeAttribute("aria-current");
     }
   });
+}
+
+function setYear() {
+  const y = document.getElementById("year");
+  if (y) y.textContent = new Date().getFullYear();
 }
 
 document.addEventListener("DOMContentLoaded", injectPartials);
