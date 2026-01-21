@@ -1,1 +1,4 @@
 ./lab
+.vscode
+.arborescence.txt
+__pycache__
