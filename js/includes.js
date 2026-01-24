@@ -4,13 +4,13 @@
   - Met le lien actif dans le menu
   - Met à jour l'année si <span id="year"></span> existe
 */
-
+/* global fetch, document, location */
 async function injectPartials() {
   const targets = document.querySelectorAll("[data-include]");
-
+/*  eslint-disable-next-line no-restricted-syntax */
   for (const el of targets) {
     const file = el.getAttribute("data-include");
-    if (!file) continue;
+    if (!file) continue; /* skip if no file specified */
 
     try {
       const res = await fetch(file, { cache: "no-cache" });
@@ -27,7 +27,7 @@ async function injectPartials() {
   setActiveNavLink();
   setYear();
 }
-
+/* Set the active navigation link based on the current URL */
 function setActiveNavLink() {
   const current = (location.pathname.split("/").pop() || "index.html").toLowerCase();
 

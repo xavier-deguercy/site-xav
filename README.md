@@ -75,7 +75,7 @@ py -m http.server 8000
 Puis ouvrir :
 
 ```
-http://localhost:8000/index.html
+
 ```
 
 ---
