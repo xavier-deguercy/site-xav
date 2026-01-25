@@ -1,16 +1,22 @@
 /*
+  =============================================================
   includes.js
-  - Injecte partials/header.html et partials/footer.html
-  - Met le lien actif dans le menu
-  - Met à jour l'année si <span id="year"></span> existe
+  -------------------------------------------------------------
+  Objectif : injecter des "partials" (header/footer) dans
+  les pages, pour éviter les copier-coller.
+
+  IMPORTANT :
+  - ça fonctionne uniquement via http:// (Live Server / python -m http.server)
+  - pas en file:// (double-clic sur le fichier)
+  =============================================================
 */
-/* global fetch, document, location */
+
 async function injectPartials() {
   const targets = document.querySelectorAll("[data-include]");
-/*  eslint-disable-next-line no-restricted-syntax */
+
   for (const el of targets) {
     const file = el.getAttribute("data-include");
-    if (!file) continue; /* skip if no file specified */
+    if (!file) continue;
 
     try {
       const res = await fetch(file, { cache: "no-cache" });
@@ -19,21 +25,23 @@ async function injectPartials() {
         continue;
       }
       el.innerHTML = await res.text();
-    } catch {
+    } catch (err) {
       el.innerHTML = `<!-- include error: ${file} -->`;
     }
   }
 
+  // Une fois le header injecté, on peut marquer le lien actif
   setActiveNavLink();
-  setYear();
 }
-/* Set the active navigation link based on the current URL */
+
 function setActiveNavLink() {
+  // Nom du fichier courant (ex: portfolio.html)
   const current = (location.pathname.split("/").pop() || "index.html").toLowerCase();
 
+  // On regarde tous les liens du header injecté
   document.querySelectorAll(".nav a").forEach((a) => {
-    const href = (a.getAttribute("href") || "").split("#")[0];
-    const target = href.split("/").pop().toLowerCase();
+    const href = a.getAttribute("href") || "";
+    const target = href.split("#")[0].split("/").pop().toLowerCase(); // retire l'ancre
 
     if (target && target === current) {
       a.classList.add("active");
@@ -43,11 +51,6 @@ function setActiveNavLink() {
       a.removeAttribute("aria-current");
     }
   });
-}
-
-function setYear() {
-  const y = document.getElementById("year");
-  if (y) y.textContent = new Date().getFullYear();
 }
 
 document.addEventListener("DOMContentLoaded", injectPartials);

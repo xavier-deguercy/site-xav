@@ -1,5 +1,1 @@
 ./lab
-.vscode
-.arborescence.txt
-__pycache__
-./legacy
