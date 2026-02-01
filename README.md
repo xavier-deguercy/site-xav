@@ -29,9 +29,8 @@ Aucun framework, aucun build obligatoire.
 
 ## 🗂️ Arborescence du projet
 
-
-
-```bash 
+```bash
+.
 ├── index.html                # page d’accueil
 ├── a-propos.html             # page “À propos”
 ├── portfolio.html            # page projets
@@ -44,28 +43,43 @@ Aucun framework, aucun build obligatoire.
 ├── js/
 │   └── includes.js           # injection des partials + logique UI
 ├── assets/
-│   ├── img/                  # images (portrait, visuels projets)
-│   └── docs/                 # CV PDF, documents téléchargeables
-├── contenu/                  # contenus ou brouillons (selon usage)
-├── lab/                      # bac à sable / tests (non référencé)
+│   ├── img/                  # images (portrait, visuels projets…)
+│   └── docs/                 # CV PDF, documents téléchargeables…
+├── contenu/                  # contenus / brouillons / ressources (selon usage)
+├── lab/                      # bac à sable / tests (non référencé dans le site)
+├── .vscode/                  # (option) recommandations d'extensions
+│   └── extensions.json
 ├── README.md
 └── .gitignore
-```
+````
 
 ---
 
 ## 🚀 Démarrage rapide (local)
 
 ### Pourquoi un serveur local ?
-Les partials (`header.html`, `footer.html`) sont injectés via `fetch()` (JS).  
-`fetch()` **ne fonctionne pas correctement** en `file://` (double-clic).
 
-### Option A — VS Code Live Server (recommandé)
-1. Installer l’extension **Live Server**
-2. Clic droit sur `index.html` → **Open with Live Server**
+Le site utilise des *partials* (header/footer) chargés via `fetch()`.
+`fetch()` ne fonctionne pas correctement en `file://` (double-clic).
 
-### Option B — Python
-Depuis la racine du repo :
+✅ Il faut donc servir le site via **HTTP**.
+
+---
+
+### Option A — VS Code + Live Server (recommandé)
+
+1. Installer **Visual Studio Code**
+2. Installer l’extension **Live Server**
+3. Ouvrir le dossier du projet dans VS Code
+4. Clic droit sur `index.html` → **Open with Live Server**
+
+Le site s’ouvre automatiquement dans le navigateur.
+
+---
+
+### Option B — Serveur local Python
+
+Si Python est installé :
 
 ```bash
 py -m http.server 8000
@@ -73,7 +87,7 @@ py -m http.server 8000
 
 Puis ouvrir :
 
-```bash
+```text
 http://localhost:8000/index.html
 ```
 
@@ -98,10 +112,10 @@ Dans chaque page HTML :
 ### Rôle de `js/includes.js`
 
 * Charge et injecte les fichiers `partials/*.html`
-* Met en surbrillance le lien actif du menu (`.active`)
+* Met en surbrillance le lien actif du menu (classe `.active`)
 * Met à jour l’année si `<span id="year"></span>` est présent
 
-👉 Le menu et le footer ne sont modifiés **qu’une seule fois**.
+👉 Le menu et le footer ne sont modifiés **qu’une seule fois** : dans `partials/`.
 
 ---
 
@@ -121,9 +135,9 @@ Dans chaque page HTML :
 
 * Font stack système (rapide, lisible) :
 
-  ```
-  system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Arial
-  ```
+```
+system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Arial
+```
 
 ### Spacing & layout
 
@@ -151,7 +165,7 @@ Dans chaque page HTML :
 * **Code commenté** pour la compréhension
 * **Dossier `lab/`** pour les tests (non référencé dans le site)
 
-Optionnel (pour éviter indexation des tests) :
+Optionnel (pour éviter indexation des tests) dans les fichiers de `lab/` :
 
 ```html
 <meta name="robots" content="noindex, nofollow">
@@ -166,22 +180,66 @@ Optionnel (pour éviter indexation des tests) :
 * Vérifier que le site est servi via `http://` (pas en double-clic)
 * Tester directement :
 
-  ```
-  http://localhost:8000/partials/header.html
-  ```
+```text
+http://localhost:8000/partials/header.html
+```
+
+Si ça s’affiche : le chemin est bon.
 
 ### Menu actif non surligné
 
 * Vérifier que `includes.js` est bien chargé
-* Vérifier la présence de la classe `.active` dans le CSS
+* Vérifier que le CSS contient un style pour `.nav a.active`
 
 ### Année absente dans le footer
 
-* Vérifier la présence de :
+* Vérifier que `partials/footer.html` contient :
 
-  ```html
-  <span id="year"></span>
-  ```
+```html
+<span id="year"></span>
+```
+
+---
+
+## 🧰 VS Code — Extensions (pour reproduire l’environnement)
+
+### 1) Exporter ta liste d’extensions (sur ton PC)
+
+Dans un terminal :
+
+```bash
+code --list-extensions > vscode-extensions.txt
+```
+
+### 2) Réinstaller toutes les extensions (sur un nouveau PC)
+
+**PowerShell (Windows)** :
+
+```powershell
+Get-Content vscode-extensions.txt | ForEach-Object { code --install-extension $_ }
+```
+
+**Bash (macOS/Linux/Git Bash)** :
+
+```bash
+cat vscode-extensions.txt | xargs -n 1 code --install-extension
+```
+
+### 3) Recommandations d’extensions dans le repo (option pro)
+
+Créer `.vscode/extensions.json` (à adapter) :
+
+```json
+{
+  "recommendations": [
+    "ritwickdey.LiveServer",
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint"
+  ]
+}
+```
+
+➡️ VS Code proposera automatiquement ces extensions à toute personne qui ouvre le projet.
 
 ---
 
@@ -203,16 +261,19 @@ git commit -m "refactor: standardise css and use header/footer partials"
 
 ## ✅ Définition de Done (DoD)
 
-Une évolution est considérée comme **terminée** si :
+Une évolution est considérée comme terminée si :
 
-* [x] Le site s’affiche correctement via serveur local
-* [x] Aucune page ne duplique le header/footer
-* [x] Tous les liens fonctionnent
-* [ ] Le CSS utilisé est `css/style.css`
-* [ ] Aucun fichier de test n’est référencé (lab)
-* [ ] Les commits sont clairs et ciblés
-* [ ] La branche est prête à être mergée dans `main`
-
+* [x] Le site s’affiche correctement via serveur local (Live Server / Python)
+* [x] Aucune page ne duplique le header/footer (partials utilisés partout)
+* [x] Tous les liens fonctionnent (navigation + ancres)
+    * [x] Pas de lien cassé (404)
+    * [x] Liens externes ouvrant dans un nouvel onglet (`target="_blank"`)
+    * [ ] Le menu affiche correctement l’élément actif (classe `.active`)
+* [] Le site est responsive (testé sur mobile / tablette)
+* [] Le CSS utilisé est `css/style.css` (pas de variantes dans les pages)
+* [] Aucun fichier de test (`lab/`) n’est référencé depuis le site
+* [] Les commits sont clairs, ciblés, et testables
+* [] La branche est prête à être mergée dans `main`
 ---
 
 ## 🗃️ Mini backlog (issues prêtes à créer)
@@ -220,20 +281,21 @@ Une évolution est considérée comme **terminée** si :
 ### UI / UX
 
 * [ ] Uniformiser toutes les pages sur `style.css`
-* [ ] Ajouter un état `hover`/`active` visible pour le menu
-* [ ] Améliorer l’accessibilité (focus, contrastes)
+* [ ] Ajouter un style net pour `.nav a.active` + état focus clavier
+* [ ] Améliorer l’accessibilité (contrastes, tailles, `aria-label`)
+* [ ] Le site est responsive (testé sur mobile / tablette)
 
 ### Contenu
 
 * [ ] Ajouter un CV PDF dans `assets/docs/`
-* [ ] Rédiger des cartes projets (problème → solution → stack)
-* [ ] Ajouter une section “Disponibilité / Contact”
+* [ ] Rédiger 3 à 6 cartes projets (problème → solution → stack)
+* [ ] Ajouter une section “Disponibilité / Contact” claire
 
 ### Technique
 
-* [ ] Nettoyer les variantes CSS inutilisées
-* [ ] Ajouter une page projet détaillée (template)
-* [ ] (Option) Génération statique via script Python (Jinja2)
+* [ ] Nettoyer les variantes CSS inutilisées (`style-v222.css`)
+* [ ] Ajouter un template “page projet détaillée”
+* [ ] (Option) Génération statique via Python/Jinja2 (sans JS includes)
 
 ---
 
@@ -243,8 +305,8 @@ Une évolution est considérée comme **terminée** si :
 GitHub : [https://github.com/xavier-deguercy](https://github.com/xavier-deguercy)
 
 ---
-
+```md
 > Ce repo sert à la fois de **portfolio** et de **support pédagogique** pour appliquer de bonnes pratiques de développement et de gestion de projet.
 
 ```
-```
+
