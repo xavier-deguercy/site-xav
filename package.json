@@ -1,0 +1,25 @@
+{
+  "name": "site_xav",
+  "version": "1.0.0",
+  "description": "md\r # SITE XAV — Portfolio personnel  \r **HTML / CSS / JavaScript (site statique modulaire)**",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xavier-deguercy/site-xav.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/xavier-deguercy/site-xav/issues"
+  },
+  "homepage": "https://github.com/xavier-deguercy/site-xav#readme",
+  "devDependencies": {
+    "eslint": "^9.39.2",
+    "prettier": "^3.8.1"
+  }
+}

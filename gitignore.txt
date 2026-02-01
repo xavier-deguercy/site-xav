@@ -1,1 +1,3 @@
 ./lab
+./legacy
+./node_modules
