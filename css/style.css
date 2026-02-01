@@ -142,7 +142,7 @@ a:focus{ outline:2px solid rgba(249,186,0,.8); outline-offset:3px; border-radius
   gap: 10px;
   flex-wrap: wrap;
 }
-
+/* UTILITIES */
 .pill{
   display:inline-flex;
   align-items:center;
@@ -152,9 +152,14 @@ a:focus{ outline:2px solid rgba(249,186,0,.8); outline-offset:3px; border-radius
   font-size: 12px;
   color: var(--muted);
 }
+.pill.green{ border-color: rgba(53,208,127,.35); color: rgba(53,208,127,.95); background: rgba(53,208,127,.08); }
+.pill.yellow{ border-color: rgba(249,186,0,.35); color: rgba(249,186,0,.95); background: rgba(249,186,0,.08); }
+.pill.red{ border-color: rgba(255,80,80,.35); color: rgba(255,80,80,.95); background: rgba(255,80,80,.08); }
 .pill.ok{ border-color: rgba(53,208,127,.35); color: rgba(53,208,127,.95); background: rgba(53,208,127,.08); }
 .pill.warn{ border-color: rgba(249,186,0,.35); color: rgba(249,186,0,.95); background: rgba(249,186,0,.08); }
+.pill.purple{ border-color: rgba(186,103,249,.35); color: rgba(186,103,249,.95); background: rgba(186,103,249,.08); } 
 
+/* BUTTONS */
 .btn{
   display:inline-flex;
   align-items:center;
@@ -178,12 +183,18 @@ a:focus{ outline:2px solid rgba(249,186,0,.8); outline-offset:3px; border-radius
 .btn.disabled,
 .btn[aria-disabled="true"]{ opacity:.55; cursor:not-allowed; }
 
+
+/* ACTIONS */
 .actions{ display:flex; gap: 10px; flex-wrap: wrap; align-items:center; }
 
+
+/* PAGE SPECIFIC */
 .section{ margin-top: 26px; }
 .section__title h2{ margin:0; font-size: 20px; }
 .section__title p{ margin: 6px 0 0; color: var(--muted); }
 
+
+/* HERO */
 .hero{
   display:grid;
   grid-template-columns: 1.25fr .75fr;
@@ -203,6 +214,7 @@ a:focus{ outline:2px solid rgba(249,186,0,.8); outline-offset:3px; border-radius
 .hero__content h1{ margin:0; font-size: 28px; line-height: 1.15; }
 .hero__media{ display:grid; gap: 14px; }
 
+/* AVATAR */
 .avatar{
   border-radius: var(--radius);
   border: 1px solid var(--border);
@@ -216,9 +228,11 @@ a:focus{ outline:2px solid rgba(249,186,0,.8); outline-offset:3px; border-radius
   height:auto;
 }
 
+/* LISTS */
 .list{ margin: 10px 0 0; padding-left: 18px; color: var(--muted); }
 .list li{ margin: 6px 0; }
 
+/* TIMELINE */
 .timeline{
   margin:0;
   padding-left: 18px;
@@ -231,8 +245,21 @@ a:focus{ outline:2px solid rgba(249,186,0,.8); outline-offset:3px; border-radius
   color: var(--text);
 }
 
+/* FOOTER */
 .footer{
   margin-top: 30px;
   padding-top: 14px;
   border-top: 1px solid var(--border);
+}
+
+
+/* Bloc code (arborescence / commandes) */
+.codeblock {
+  margin: 12px 0 0;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: rgba(0,0,0,.25);
+  overflow-x: auto;
+  color: var(--muted);
 }
