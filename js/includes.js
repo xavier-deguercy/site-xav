@@ -25,7 +25,7 @@ async function injectPartials() {
         continue;
       }
       el.innerHTML = await res.text();
-    } catch (err) {
+    } catch {
       el.innerHTML = `<!-- include error: ${file} -->`;
     }
   }
@@ -36,7 +36,9 @@ async function injectPartials() {
 
 function setActiveNavLink() {
   // Nom du fichier courant (ex: portfolio.html)
-  const current = (location.pathname.split("/").pop() || "index.html").toLowerCase();
+  const current = (
+    location.pathname.split("/").pop() || "index.html"
+  ).toLowerCase();
 
   // On regarde tous les liens du header injecté
   document.querySelectorAll(".nav a").forEach((a) => {

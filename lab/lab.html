@@ -1,33 +1,35 @@
 <!doctype html>
 <html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Xavier Deguercy - Lab</title>
+    <meta
+      name="description"
+      content="Zone de laboratoire pour prototypes et tests UI du portfolio de Xavier Deguercy."
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <script src="../js/includes.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
+    <div data-include="../partials/header.html"></div>
 
+    <main id="contenu" class="container">
+      <section class="section">
+        <div class="section__title">
+          <h2>Lab</h2>
+          <p>Zone de test pour les composants et variations visuelles.</p>
+        </div>
+      </section>
+    </main>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Xavier Deguercy — Portfolio (Data / Dev / Gestion de projet)</title>
-  <meta name="description" content="Portfolio de Xavier Deguercy : projets data (Python/SQL), développement, et pilotage (PMO/CdP). Projets, compétences et contact." />
-  <link rel="stylesheet" href="css/style-v2.css" />
-  <script src="js/includes.js" defer></script> <!-- Script pour inclure les partials (header/footer) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" /> <!-- Préchargement des polices Google Fonts --> 
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> <!-- Préchargement des polices Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat&display=swap" rel="stylesheet" /> <!-- Import des polices Manrope et Montserrat -->
-</head>
-
-
-<body>
-  <div data-include="partials/header.html"></div>
-
-  <main>...contenu...</main>
-
-  <div data-include="partials/footer.html"></div>
-</body>
-
-
+    <div data-include="../partials/footer.html"></div>
+  </body>
 </html>
-=============================================================
-  partials/header.html
-  -------------------------------------------------------------
-  Header commun (logo + navigation).
-  - But : modifié UNE SEULE FOIS, injecté sur toutes les pages.
-  =============================================================

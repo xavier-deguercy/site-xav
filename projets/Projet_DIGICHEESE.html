@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-  <!-- =========================================================
+    <!-- =========================================================
        Page projet (pattern) : DIGICHEESE (TP7 Diginamic)
        Fichier cible : /projets/digicheese.html
 
@@ -26,172 +26,221 @@
          qui se connecte à l'API, avec auth par X-API-Key et option DISABLE_AUTH en dev.
        ========================================================= -->
 
-  <title>DIGICHEESE (TP7) — API FastAPI + MySQL | Xavier Deguercy</title>
-  <meta
-    name="description"
-    content="DIGICHEESE (projet de groupe TP7) : refonte d’un SI legacy (Access/VBA) en API FastAPI + MySQL, tests Pytest, backlog produit, documentation. Contribution : MOA/backlog + CRUD Objets & Conditionnements + tests."
-  />
+    <title>DIGICHEESE (TP7) — API FastAPI + MySQL | Xavier Deguercy</title>
+    <meta
+      name="description"
+      content="DIGICHEESE (projet de groupe TP7) : refonte d’un SI legacy (Access/VBA) en API FastAPI + MySQL, tests Pytest, backlog produit, documentation. Contribution : MOA/backlog + CRUD Objets & Conditionnements + tests."
+    />
 
-  <!-- CSS unique du site (chemin relatif depuis /projets/) -->
-  <link rel="stylesheet" href="../css/style.css" />
-  <script src="../js/includes.js" defer></script>
-</head>
+    <!-- CSS unique du site (chemin relatif depuis /projets/) -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <script src="../js/includes.js" defer></script>
+  </head>
 
-<body>
-  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <body>
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
 
-  <!-- Header commun injecté -->
-  <div data-include="../partials/header.html"></div>
+    <!-- Header commun injecté -->
+    <div data-include="../partials/header.html"></div>
 
-  <main id="contenu" class="container">
-
-    <!-- =========================================================
+    <main id="contenu" class="container">
+      <!-- =========================================================
          HERO
          ========================================================= -->
-    <section class="section">
-      <div class="section__title">
-        <h1>DIGICHEESE — Projet de groupe (TP7)</h1>
-        <p class="muted">
-          Refonte d’un SI legacy (Access/VBA) : conception et livraison d’une API REST (FastAPI) + base MySQL,
-          avec tests automatisés, documentation et pilotage projet (besoin → backlog → suivi).
-        </p>
-      </div>
-
-      <div class="grid cols-2" style="margin-top:14px;">
-        <!-- Résumé -->
-        <article class="card">
-          <h2 class="card__title">Résumé</h2>
+      <section class="section">
+        <div class="section__title">
+          <h1>DIGICHEESE — Projet de groupe (TP7)</h1>
           <p class="muted">
-            DIGICHEESE est un projet pédagogique mené en équipe dans le cadre du TP7.
-            Le sujet simule la modernisation d’un système historique de gestion de cadeaux fidélité
-            (Access + VBA) par une solution moderne : une API FastAPI documentée (Swagger), une base MySQL,
-            des tests Pytest et une démarche projet outillée (expression de besoin, backlog produit, suivi).
+            Refonte d’un SI legacy (Access/VBA) : conception et livraison d’une
+            API REST (FastAPI) + base MySQL, avec tests automatisés,
+            documentation et pilotage projet (besoin → backlog → suivi).
           </p>
+        </div>
 
-          <div class="pills" style="margin-top:12px;">
-            <span class="pill">Python</span>
-            <span class="pill">FastAPI</span>
-            <span class="pill">MySQL</span>
-            <span class="pill">SQLModel / ORM</span>
-            <span class="pill">Pytest</span>
-            <span class="pill">Docker Compose</span>
-            <span class="pill">Swagger / OpenAPI</span>
-          </div>
+        <div class="grid cols-2" style="margin-top: 14px">
+          <!-- Résumé -->
+          <article class="card">
+            <h2 class="card__title">Résumé</h2>
+            <p class="muted">
+              DIGICHEESE est un projet pédagogique mené en équipe dans le cadre
+              du TP7. Le sujet simule la modernisation d’un système historique
+              de gestion de cadeaux fidélité (Access + VBA) par une solution
+              moderne : une API FastAPI documentée (Swagger), une base MySQL,
+              des tests Pytest et une démarche projet outillée (expression de
+              besoin, backlog produit, suivi).
+            </p>
 
-          <div class="actions" style="margin-top:12px;">
-            <a class="btn primary" target="_blank" rel="noopener"
-               href="https://github.com/xavier-deguercy/TP_digicheese">
-              Repo GitHub (backend)
-            </a>
-            <a class="btn ghost" target="_blank" rel="noopener"
-               href="https://github.com/xavier-deguercy/TP_digicheese#readme">
-              README / Quickstart
-            </a>
-          </div>
+            <div class="pills" style="margin-top: 12px">
+              <span class="pill">Python</span>
+              <span class="pill">FastAPI</span>
+              <span class="pill">MySQL</span>
+              <span class="pill">SQLModel / ORM</span>
+              <span class="pill">Pytest</span>
+              <span class="pill">Docker Compose</span>
+              <span class="pill">Swagger / OpenAPI</span>
+            </div>
 
-          <small class="muted" style="display:block; margin-top:10px;">
-            Note : l’IHM n’est pas le livrable principal du TP. Une UI Admin fonctionnelle (V1) a été proposée
-            en complément pour démontrer l’utilisation des endpoints.
-          </small>
-        </article>
+            <div class="actions" style="margin-top: 12px">
+              <a
+                class="btn primary"
+                target="_blank"
+                rel="noopener"
+                href="https://github.com/xavier-deguercy/TP_digicheese"
+              >
+                Repo GitHub (backend)
+              </a>
+              <a
+                class="btn ghost"
+                target="_blank"
+                rel="noopener"
+                href="https://github.com/xavier-deguercy/TP_digicheese#readme"
+              >
+                README / Quickstart
+              </a>
+            </div>
 
-        <!-- Points clés -->
-        <article class="card">
-          <h2 class="card__title">Points clés</h2>
-          <ul class="list">
-            <li>API REST FastAPI opérationnelle + documentation Swagger (<code>/docs</code>).</li>
-            <li>Base MySQL : référentiels + ressources Admin (CRUD).</li>
-            <li>Tests Pytest : cas nominal + cas erreur par ressource Admin (objectif TP).</li>
-            <li>Pilotage projet : expression de besoin, backlog produit, suivi via outil de PPM/Project (puis reformalisation Jira/Confluence).</li>
-          </ul>
+            <small class="muted" style="display: block; margin-top: 10px">
+              Note : l’IHM n’est pas le livrable principal du TP. Une UI Admin
+              fonctionnelle (V1) a été proposée en complément pour démontrer
+              l’utilisation des endpoints.
+            </small>
+          </article>
 
-          <div style="margin-top:12px;">
-            <!-- TODO : mets une date réelle si tu veux -->
-            <span class="pill">Statut : en cours / stabilisation</span>
-            <span class="pill">Dernière maj : 2026-02-01</span>
-          </div>
-        </article>
-      </div>
-    </section>
+          <!-- Points clés -->
+          <article class="card">
+            <h2 class="card__title">Points clés</h2>
+            <ul class="list">
+              <li>
+                API REST FastAPI opérationnelle + documentation Swagger
+                (<code>/docs</code>).
+              </li>
+              <li>Base MySQL : référentiels + ressources Admin (CRUD).</li>
+              <li>
+                Tests Pytest : cas nominal + cas erreur par ressource Admin
+                (objectif TP).
+              </li>
+              <li>
+                Pilotage projet : expression de besoin, backlog produit, suivi
+                via outil de PPM/Project (puis reformalisation Jira/Confluence).
+              </li>
+            </ul>
 
-    <!-- =========================================================
+            <div style="margin-top: 12px">
+              <!-- TODO : mets une date réelle si tu veux -->
+              <span class="pill">Statut : en cours / stabilisation</span>
+              <span class="pill">Dernière maj : 2026-02-01</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- =========================================================
          CONTEXTE & OBJECTIFS
          ========================================================= -->
-    <section class="section">
-      <div class="section__title">
-        <h2>Contexte</h2>
-        <p>Problème simulé et objectifs du TP.</p>
-      </div>
+      <section class="section">
+        <div class="section__title">
+          <h2>Contexte</h2>
+          <p>Problème simulé et objectifs du TP.</p>
+        </div>
 
-      <div class="card">
-        <p class="muted">
-          Le SI historique (Access + VBA, ~20 ans) présente des limites : instabilité, maintenance difficile,
-          ergonomie vieillissante. Le TP vise à concevoir une cible modernisée : une API exposant des endpoints REST,
-          une base MySQL centralisée, et une démarche projet traçable.
-        </p>
+        <div class="card">
+          <p class="muted">
+            Le SI historique (Access + VBA, ~20 ans) présente des limites :
+            instabilité, maintenance difficile, ergonomie vieillissante. Le TP
+            vise à concevoir une cible modernisée : une API exposant des
+            endpoints REST, une base MySQL centralisée, et une démarche projet
+            traçable.
+          </p>
 
-        <h3 class="card__title" style="margin-top:12px;">Objectifs livrables</h3>
-        <ul class="list">
-          <li>API FastAPI opérationnelle + documentation Swagger.</li>
-          <li>DB MySQL avec les tables nécessaires au CRUD Admin obligatoire.</li>
-          <li>Tests automatisés (Pytest) : au minimum 1 test nominal + 1 test erreur par ressource Admin.</li>
-          <li>Dépôt Git structuré + scripts SQL + documentation (fonctionnelle / technique / utilisation).</li>
-          <li>Backlog + board Agile + sprint fictif + retour d’expérience collaboration.</li>
-        </ul>
-      </div>
-    </section>
+          <h3 class="card__title" style="margin-top: 12px">
+            Objectifs livrables
+          </h3>
+          <ul class="list">
+            <li>API FastAPI opérationnelle + documentation Swagger.</li>
+            <li>
+              DB MySQL avec les tables nécessaires au CRUD Admin obligatoire.
+            </li>
+            <li>
+              Tests automatisés (Pytest) : au minimum 1 test nominal + 1 test
+              erreur par ressource Admin.
+            </li>
+            <li>
+              Dépôt Git structuré + scripts SQL + documentation (fonctionnelle /
+              technique / utilisation).
+            </li>
+            <li>
+              Backlog + board Agile + sprint fictif + retour d’expérience
+              collaboration.
+            </li>
+          </ul>
+        </div>
+      </section>
 
-    <!-- =========================================================
+      <!-- =========================================================
          PÉRIMÈTRE
          ========================================================= -->
-    <section class="section">
-      <div class="section__title">
-        <h2>Périmètre</h2>
-        <p>Ce qui est livré vs hors-scope.</p>
-      </div>
-
-      <div class="grid cols-2">
-        <div class="card">
-          <h3 class="card__title">IN (livré)</h3>
-          <ul class="list">
-            <li>CRUD Admin sur les référentiels imposés par le TP (dont Objets et Conditionnements).</li>
-            <li>Documentation / Quickstart et conventions d’API.</li>
-            <li>Tests Pytest (nominal + erreurs) et traçabilité attendue.</li>
-            <li>Organisation projet (backlog, suivi, sprint fictif).</li>
-          </ul>
+      <section class="section">
+        <div class="section__title">
+          <h2>Périmètre</h2>
+          <p>Ce qui est livré vs hors-scope.</p>
         </div>
 
-        <div class="card">
-          <h3 class="card__title">OUT (hors périmètre TP)</h3>
-          <ul class="list">
-            <li>IHM complète (application web) — l’API est le livrable principal.</li>
-            <li>Fonctions avancées non demandées (reporting, monitoring, perf tuning, etc.).</li>
-            <li>Industrialisation au-delà du cadre TP.</li>
-          </ul>
+        <div class="grid cols-2">
+          <div class="card">
+            <h3 class="card__title">IN (livré)</h3>
+            <ul class="list">
+              <li>
+                CRUD Admin sur les référentiels imposés par le TP (dont Objets
+                et Conditionnements).
+              </li>
+              <li>Documentation / Quickstart et conventions d’API.</li>
+              <li>Tests Pytest (nominal + erreurs) et traçabilité attendue.</li>
+              <li>Organisation projet (backlog, suivi, sprint fictif).</li>
+            </ul>
+          </div>
 
-          <small class="muted" style="display:block; margin-top:10px;">
-            Malgré le OUT, une IHM Admin (V1) a été proposée pour illustrer un usage réel des endpoints.
-          </small>
+          <div class="card">
+            <h3 class="card__title">OUT (hors périmètre TP)</h3>
+            <ul class="list">
+              <li>
+                IHM complète (application web) — l’API est le livrable
+                principal.
+              </li>
+              <li>
+                Fonctions avancées non demandées (reporting, monitoring, perf
+                tuning, etc.).
+              </li>
+              <li>Industrialisation au-delà du cadre TP.</li>
+            </ul>
+
+            <small class="muted" style="display: block; margin-top: 10px">
+              Malgré le OUT, une IHM Admin (V1) a été proposée pour illustrer un
+              usage réel des endpoints.
+            </small>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- =========================================================
+      <!-- =========================================================
          ARCHITECTURE / TECH
          ========================================================= -->
-    <section class="section">
-      <div class="section__title">
-        <h2>Architecture</h2>
-        <p>Vue d’ensemble technique (niveau portfolio).</p>
-      </div>
+      <section class="section">
+        <div class="section__title">
+          <h2>Architecture</h2>
+          <p>Vue d’ensemble technique (niveau portfolio).</p>
+        </div>
 
-      <div class="card">
-        <p class="muted">
-          L’architecture vise à rester simple, lisible et testable : endpoints REST (FastAPI) + modèles ORM,
-          persistance MySQL, et tests automatisés. La documentation est exposée via Swagger (<code>/docs</code>).
-        </p>
+        <div class="card">
+          <p class="muted">
+            L’architecture vise à rester simple, lisible et testable : endpoints
+            REST (FastAPI) + modèles ORM, persistance MySQL, et tests
+            automatisés. La documentation est exposée via Swagger
+            (<code>/docs</code>).
+          </p>
 
-        <pre class="codeblock"><code># Structure indicative (à adapter si besoin)
+          <pre
+            class="codeblock"
+          ><code># Structure indicative (à adapter si besoin)
 TP_digicheese/
   src/
     main.py
@@ -203,28 +252,32 @@ TP_digicheese/
   docker-compose.yml
   README.md</code></pre>
 
-        <small class="muted">
-          Si ton repo utilise un autre layout (ex: <code>app/</code> au lieu de <code>src/</code>), ajuste ce bloc.
-        </small>
-      </div>
-    </section>
+          <small class="muted">
+            Si ton repo utilise un autre layout (ex: <code>app/</code> au lieu
+            de <code>src/</code>), ajuste ce bloc.
+          </small>
+        </div>
+      </section>
 
-    <!-- =========================================================
+      <!-- =========================================================
          QUALITÉ / TESTS
          ========================================================= -->
-    <section class="section">
-      <div class="section__title">
-        <h2>Qualité & tests</h2>
-        <p>Exécution reproductible, tests, et traçabilité.</p>
-      </div>
+      <section class="section">
+        <div class="section__title">
+          <h2>Qualité & tests</h2>
+          <p>Exécution reproductible, tests, et traçabilité.</p>
+        </div>
 
-      <div class="card">
-        <p class="muted">
-          Le cadre du TP impose une couverture minimale : 1 test nominal + 1 test erreur par ressource Admin.
-          Les scénarios de tests sont tracés (SquashTM) conformément aux attentes pédagogiques.
-        </p>
+        <div class="card">
+          <p class="muted">
+            Le cadre du TP impose une couverture minimale : 1 test nominal + 1
+            test erreur par ressource Admin. Les scénarios de tests sont tracés
+            (SquashTM) conformément aux attentes pédagogiques.
+          </p>
 
-        <pre class="codeblock"><code># Exemple de commandes (à adapter à ton README)
+          <pre
+            class="codeblock"
+          ><code># Exemple de commandes (à adapter à ton README)
 # 1) Lancer la DB et les services
 docker compose up -d
 
@@ -233,170 +286,225 @@ uvicorn src.main:app --reload
 
 # 3) Lancer les tests
 pytest -q</code></pre>
-      </div>
-    </section>
+        </div>
+      </section>
 
-    <!-- =========================================================
+      <!-- =========================================================
          PROJET DE GROUPE / ORGANISATION
          ========================================================= -->
-    <section class="section">
-      <div class="section__title">
-        <h2>Organisation projet (groupe)</h2>
-        <p>Du besoin au backlog, puis au suivi et aux livrables.</p>
-      </div>
+      <section class="section">
+        <div class="section__title">
+          <h2>Organisation projet (groupe)</h2>
+          <p>Du besoin au backlog, puis au suivi et aux livrables.</p>
+        </div>
 
-      <div class="card">
-        <ul class="list">
-          <li>Projet complet : expression de besoin, backlog produit, priorisation, suivi et documentation.</li>
-          <li>Suivi initial dans un outil type PPM / project (puis reformalisation Jira et Confluence).</li>
-          <li>Backlog structuré (approche MoSCoW) + sprint fictif (pédagogique).</li>
-          <li>Conventions communes : structure repo, règles de branches, livrables attendus.</li>
-        </ul>
-      </div>
-    </section>
+        <div class="card">
+          <ul class="list">
+            <li>
+              Projet complet : expression de besoin, backlog produit,
+              priorisation, suivi et documentation.
+            </li>
+            <li>
+              Suivi initial dans un outil type PPM / project (puis
+              reformalisation Jira et Confluence).
+            </li>
+            <li>
+              Backlog structuré (approche MoSCoW) + sprint fictif (pédagogique).
+            </li>
+            <li>
+              Conventions communes : structure repo, règles de branches,
+              livrables attendus.
+            </li>
+          </ul>
+        </div>
+      </section>
 
-    <!-- =========================================================
+      <!-- =========================================================
          TA CONTRIBUTION (FACTUELLE)
          ========================================================= -->
-    <section class="section">
-      <div class="section__title">
-        <h2>Ma contribution</h2>
-        <p>Ce que j’ai livré personnellement (sans extrapolation).</p>
-      </div>
+      <section class="section">
+        <div class="section__title">
+          <h2>Ma contribution</h2>
+          <p>Ce que j’ai livré personnellement (sans extrapolation).</p>
+        </div>
 
-      <div class="card">
-        <ul class="list">
-          <li>Première version de la partie MOA : expression de besoin + structuration du backlog produit (GitHub Projects).</li>
-          <li>Implémentation complète du CRUD <strong>Objets</strong> (endpoints + persistance) + tests (nominal + erreur).</li>
-          <li>Implémentation complète du CRUD <strong>Conditionnements</strong> (endpoints + persistance) + tests (nominal + erreur).</li>
-          <li>Proposition d’une IHM Admin (V1) fonctionnelle pour illustrer l’usage de l’API (hors scope TP).</li>
-        </ul>
-      </div>
-    </section>
+        <div class="card">
+          <ul class="list">
+            <li>
+              Première version de la partie MOA : expression de besoin +
+              structuration du backlog produit (GitHub Projects).
+            </li>
+            <li>
+              Implémentation complète du CRUD <strong>Objets</strong> (endpoints
+              + persistance) + tests (nominal + erreur).
+            </li>
+            <li>
+              Implémentation complète du CRUD
+              <strong>Conditionnements</strong> (endpoints + persistance) +
+              tests (nominal + erreur).
+            </li>
+            <li>
+              Proposition d’une IHM Admin (V1) fonctionnelle pour illustrer
+              l’usage de l’API (hors scope TP).
+            </li>
+          </ul>
+        </div>
+      </section>
 
-    <!-- =========================================================
+      <!-- =========================================================
          IHM ADMIN (V1) — PROPOSITION COMPLEMENTAIRE
          Basée sur tes pages : dashboard, objets, conditionnements, login.
          ========================================================= -->
-    <section class="section">
-      <div class="section__title">
-        <h2>IHM Admin (V1) — Front statique connecté à l’API</h2>
-        <p>UI de démonstration : dashboard + CRUD Objets/Conditionnements + login (API key).</p>
-      </div>
+      <section class="section">
+        <div class="section__title">
+          <h2>IHM Admin (V1) — Front statique connecté à l’API</h2>
+          <p>
+            UI de démonstration : dashboard + CRUD Objets/Conditionnements +
+            login (API key).
+          </p>
+        </div>
 
-      <div class="card">
-        <p class="muted">
-          Pour rendre le projet plus “démontrable”, une UI Admin simple a été créée.
-          Elle est statique (HTML/CSS/JS) et se connecte à l’API : dashboard de statut (<code>/health</code>),
-          pages CRUD Objets et Conditionnements, et une page de login optionnelle.
-        </p>
+        <div class="card">
+          <p class="muted">
+            Pour rendre le projet plus “démontrable”, une UI Admin simple a été
+            créée. Elle est statique (HTML/CSS/JS) et se connecte à l’API :
+            dashboard de statut (<code>/health</code>), pages CRUD Objets et
+            Conditionnements, et une page de login optionnelle.
+          </p>
 
-        <h3 class="card__title" style="margin-top:12px;">Authentification</h3>
-        <p class="muted">
-          L’API attend un header <code>X-API-Key</code>. L’IHM stocke la clé (LocalStorage) et l’envoie à chaque requête.
-          En environnement de dev, l’auth peut être désactivée via la variable <code>DISABLE_AUTH=true</code>.
-        </p>
+          <h3 class="card__title" style="margin-top: 12px">Authentification</h3>
+          <p class="muted">
+            L’API attend un header <code>X-API-Key</code>. L’IHM stocke la clé
+            (LocalStorage) et l’envoie à chaque requête. En environnement de
+            dev, l’auth peut être désactivée via la variable
+            <code>DISABLE_AUTH=true</code>.
+          </p>
 
-        <h3 class="card__title" style="margin-top:12px;">Pages réalisées</h3>
-        <ul class="list">
-          <li>Dashboard Admin : test du endpoint <code>/health</code> + raccourcis vers les référentiels.</li>
-          <li>CRUD Objets : GET / POST / PATCH / DELETE (filtre local V1).</li>
-          <li>CRUD Conditionnements : GET / POST / PATCH / DELETE.</li>
-          <li>Login : enregistrement d’une <code>X-API-Key</code> (optionnel selon config).</li>
-        </ul>
+          <h3 class="card__title" style="margin-top: 12px">Pages réalisées</h3>
+          <ul class="list">
+            <li>
+              Dashboard Admin : test du endpoint <code>/health</code> +
+              raccourcis vers les référentiels.
+            </li>
+            <li>
+              CRUD Objets : GET / POST / PATCH / DELETE (filtre local V1).
+            </li>
+            <li>CRUD Conditionnements : GET / POST / PATCH / DELETE.</li>
+            <li>
+              Login : enregistrement d’une <code>X-API-Key</code> (optionnel
+              selon config).
+            </li>
+          </ul>
 
-        <small class="muted">
-          Notes : mapping des champs configurable dans <code>js/config.js</code> (si les noms de champs API diffèrent).
-        </small>
-      </div>
-    </section>
+          <small class="muted">
+            Notes : mapping des champs configurable dans
+            <code>js/config.js</code> (si les noms de champs API diffèrent).
+          </small>
+        </div>
+      </section>
 
-    <!-- =========================================================
+      <!-- =========================================================
          CAPTURES / VISUELS (à remplacer quand tu as des captures)
          ========================================================= -->
-    <section class="section">
-      <div class="section__title">
-        <h2>Captures</h2>
-        <p>Ajoute 1 à 3 visuels : Swagger, UI Admin, tests.</p>
-      </div>
-
-      <div class="grid cols-3">
-        <div class="card subtle">
-          <img
-            src="../assets/img/projets/digicheese/placeholder-swagger.png"
-            alt="Swagger FastAPI (docs) — DIGICHEESE"
-            style="width:100%; border-radius:12px;"
-          />
-          <p class="muted" style="margin-top:10px;">Swagger / OpenAPI (<code>/docs</code>).</p>
+      <section class="section">
+        <div class="section__title">
+          <h2>Captures</h2>
+          <p>Ajoute 1 à 3 visuels : Swagger, UI Admin, tests.</p>
         </div>
 
-        <div class="card subtle">
-          <img
-            src="../assets/img/projets/digicheese/placeholder-ui-admin.png"
-            alt="IHM Admin (V1) — dashboard / objets / conditionnements"
-            style="width:100%; border-radius:12px;"
-          />
-          <p class="muted" style="margin-top:10px;">IHM Admin (V1) : dashboard + CRUD.</p>
+        <div class="grid cols-3">
+          <div class="card subtle">
+            <img
+              src="../assets/img/portfolio/dice_roller_gui.PNG"
+              alt="Swagger FastAPI (docs) — DIGICHEESE"
+              style="width: 100%; border-radius: 12px"
+            />
+            <p class="muted" style="margin-top: 10px">
+              Swagger / OpenAPI (<code>/docs</code>).
+            </p>
+          </div>
+
+          <div class="card subtle">
+            <img
+              src="../assets/img/portfolio/dice_roller_gui.PNG"
+              alt="IHM Admin (V1) — dashboard / objets / conditionnements"
+              style="width: 100%; border-radius: 12px"
+            />
+            <p class="muted" style="margin-top: 10px">
+              IHM Admin (V1) : dashboard + CRUD.
+            </p>
+          </div>
+
+          <div class="card subtle">
+            <img
+              src="../assets/img/portfolio/dice_roller_gui.PNG"
+              alt="Tests Pytest — DIGICHEESE"
+              style="width: 100%; border-radius: 12px"
+            />
+            <p class="muted" style="margin-top: 10px">
+              Tests Pytest (nominal + erreurs).
+            </p>
+          </div>
         </div>
 
-        <div class="card subtle">
-          <img
-            src="../assets/img/projets/digicheese/placeholder-tests.png"
-            alt="Tests Pytest — DIGICHEESE"
-            style="width:100%; border-radius:12px;"
-          />
-          <p class="muted" style="margin-top:10px;">Tests Pytest (nominal + erreurs).</p>
-        </div>
-      </div>
+        <small class="muted" style="display: block; margin-top: 10px">
+          Recommandation : place tes captures dans
+          <code>/assets/img/projets/digicheese/</code> et remplace les fichiers
+          placeholder.
+        </small>
+      </section>
 
-      <small class="muted" style="display:block; margin-top:10px;">
-        Recommandation : place tes captures dans <code>/assets/img/projets/digicheese/</code> et remplace les fichiers placeholder.
-      </small>
-    </section>
-
-    <!-- =========================================================
+      <!-- =========================================================
          LIENS
          ========================================================= -->
-    <section class="section">
-      <div class="section__title">
-        <h2>Liens</h2>
-        <p>Accès rapide aux ressources.</p>
-      </div>
+      <section class="section">
+        <div class="section__title">
+          <h2>Liens</h2>
+          <p>Accès rapide aux ressources.</p>
+        </div>
 
-      <div class="card">
-        <ul class="list">
-          <li>
-            <a target="_blank" rel="noopener" href="https://github.com/xavier-deguercy/TP_digicheese">
-              Repo GitHub — TP_digicheese (backend)
-            </a>
-          </li>
-          <li>
-            <a target="_blank" rel="noopener" href="https://github.com/xavier-deguercy/TP_digicheese#readme">
-              README / Quickstart
-            </a>
-          </li>
-        </ul>
+        <div class="card">
+          <ul class="list">
+            <li>
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://github.com/xavier-deguercy/TP_digicheese"
+              >
+                Repo GitHub — TP_digicheese (backend)
+              </a>
+            </li>
+            <li>
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://github.com/xavier-deguercy/TP_digicheese#readme"
+              >
+                README / Quickstart
+              </a>
+            </li>
+          </ul>
 
-        <small class="muted">
-          Si tu publies aussi l’UI Admin dans le même repo (ou un repo dédié), je peux ajouter le lien exact ici.
-        </small>
-      </div>
-    </section>
+          <small class="muted">
+            Si tu publies aussi l’UI Admin dans le même repo (ou un repo dédié),
+            je peux ajouter le lien exact ici.
+          </small>
+        </div>
+      </section>
 
-    <!-- =========================================================
+      <!-- =========================================================
          NAV
          ========================================================= -->
-    <section class="section">
-      <div class="card">
-        <div class="actions">
-          <a class="btn" href="../index.html#projets">← Retour aux projets</a>
+      <section class="section">
+        <div class="card">
+          <div class="actions">
+            <a class="btn" href="../index.html#projets">← Retour aux projets</a>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
-  </main>
-
-  <!-- Footer commun injecté -->
-  <div data-include="../partials/footer.html"></div>
-</body>
+    <!-- Footer commun injecté -->
+    <div data-include="../partials/footer.html"></div>
+  </body>
 </html>

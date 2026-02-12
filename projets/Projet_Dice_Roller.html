@@ -2,11 +2,11 @@
 
 <!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-  <!-- =========================================================
+    <!-- =========================================================
        Page projet (pattern) : Dice Roller (Python) 
        Objectif :
        - page "détails projet" cohérente avec le reste du site
@@ -19,163 +19,203 @@
        - /partials/header.html, /partials/footer.html
        ========================================================= -->
 
-  <title>Dice Roller (Python) — Projet | Xavier Deguercy</title>
-  <meta
-    name="description"
-    content="Dice Roller en Python : simulateur de lancers de dés, structuré comme un mini-projet (code propre, tests, documentation)."
-  />
+    <title>Dice Roller (Python) — Projet | Xavier Deguercy</title>
+    <meta
+      name="description"
+      content="Dice Roller en Python : simulateur de lancers de dés, structuré comme un mini-projet (code propre, tests, documentation)."
+    />
 
-  <!-- CSS unique du site (chemin relatif depuis /projets/) -->
-  <link rel="stylesheet" href="../css/style.css" />
-  <script src="../js/includes.js" defer></script>
-</head>
+    <!-- CSS unique du site (chemin relatif depuis /projets/) -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <script src="../js/includes.js" defer></script>
+  </head>
 
-<body>
-  <!-- Lien accessibilité : permet de sauter la nav -->
-  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <body>
+    <!-- Lien accessibilité : permet de sauter la nav -->
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
 
-  <!-- Header commun injecté (1 seule source de vérité) -->
-  <div data-include="../partials/header.html"></div>
+    <!-- Header commun injecté (1 seule source de vérité) -->
+    <div data-include="../partials/header.html"></div>
 
-  <main id="contenu" class="container">
-
-    <!-- =========================================================
+    <main id="contenu" class="container">
+      <!-- =========================================================
          HERO PROJET : titre + pitch + CTA
          ========================================================= -->
-    <section class="section">
-      <div class="section__title">
-        <h1>Dice Roller (Python)</h1>
-        <p class="muted">
-          Mini-projet Python : simulateur de lancers de dés, pensé comme un exercice “pro” (structure, qualité, documentation).
-        </p>
-      </div>
+      <section class="section">
+        <div class="section__title">
+          <h1>Dice Roller (Python)</h1>
+          <p class="muted">
+            Mini-projet Python : simulateur de lancers de dés, pensé comme un
+            exercice “pro” (structure, qualité, documentation).
+          </p>
+        </div>
 
-      <div class="grid cols-2" style="margin-top:14px;">
-        <!-- Résumé / Positionnement -->
-        <article class="card">
-          <h2 class="card__title">Résumé</h2>
+        <div class="grid cols-2" style="margin-top: 14px">
+          <!-- Résumé / Positionnement -->
+          <article class="card">
+            <h2 class="card__title">Résumé</h2>
 
-          <!-- NOTE :
+            <!-- NOTE :
                Garde ce bloc court. 5–7 lignes max.
                Tu pourras détailler dans "Fonctionnalités" et "Architecture". -->
-          <p class="muted">
-            Ce projet sert de support d’entraînement pour travailler la qualité de code : organisation du repo,
-            séparation logique des responsabilités, et mise en place de tests sur des cas représentatifs.
-            L’objectif est d’obtenir un livrable clair, reproductible et démontrable sur GitHub.
-          </p>
+            <p class="muted">
+              Ce projet sert de support d’entraînement pour travailler la
+              qualité de code : organisation du repo, séparation logique des
+              responsabilités, et mise en place de tests sur des cas
+              représentatifs. L’objectif est d’obtenir un livrable clair,
+              reproductible et démontrable sur GitHub.
+            </p>
 
-          <!-- Stack / tags : reste factuel -->
-          <div class="pills" style="margin-top:12px;">
-            <span class="pill">Python</span>
-            <span class="pill">OOP</span>
-            <span class="pill">Tests</span>
-            <span class="pill">Documentation</span>
-          </div>
+            <!-- Stack / tags : reste factuel -->
+            <div class="pills" style="margin-top: 12px">
+              <span class="pill">Python</span>
+              <span class="pill">OOP</span>
+              <span class="pill">Tests</span>
+              <span class="pill">Documentation</span>
+            </div>
 
-          <div class="actions" style="margin-top:12px;">
-            <a class="btn primary" target="_blank" rel="noopener"
-               href="https://github.com/xavier-deguercy/Dice_Roller_Python">
-              Repo GitHub
-            </a>
+            <div class="actions" style="margin-top: 12px">
+              <a
+                class="btn primary"
+                target="_blank"
+                rel="noopener"
+                href="https://github.com/xavier-deguercy/Dice_Roller_Python"
+              >
+                Repo GitHub
+              </a>
 
-            <!-- TODO : remplace par une démo si tu en as une (vidéo, gif, page) -->
-            <a class="btn ghost" target="_blank" rel="noopener"
-               href="https://github.com/xavier-deguercy/Dice_Roller_Python#readme">
-              README
-            </a>
-          </div>
-        </article>
+              <!-- TODO : remplace par une démo si tu en as une (vidéo, gif, page) -->
+              <a
+                class="btn ghost"
+                target="_blank"
+                rel="noopener"
+                href="https://github.com/xavier-deguercy/Dice_Roller_Python#readme"
+              >
+                README
+              </a>
+            </div>
+          </article>
 
-        <!-- Points clés (preuve de valeur) -->
-        <article class="card">
-          <h2 class="card__title">Points clés</h2>
-          <ul class="list">
-            <!-- IMPORTANT : je n’invente pas de détails ; à toi de préciser si vrai -->
-            <li>Projet structuré pour être lisible (dossiers, nommage, séparation des rôles).</li>
-            <li>Documentation orientée “reproductibilité” (lancer / tester / comprendre).</li>
-            <li>Tests automatisés pour sécuriser les comportements attendus.</li>
-          </ul>
+          <!-- Points clés (preuve de valeur) -->
+          <article class="card">
+            <h2 class="card__title">Points clés</h2>
+            <ul class="list">
+              <!-- IMPORTANT : je n’invente pas de détails ; à toi de préciser si vrai -->
+              <li>
+                Projet structuré pour être lisible (dossiers, nommage,
+                séparation des rôles).
+              </li>
+              <li>
+                Documentation orientée “reproductibilité” (lancer / tester /
+                comprendre).
+              </li>
+              <li>
+                Tests automatisés pour sécuriser les comportements attendus.
+              </li>
+            </ul>
 
-          <div style="margin-top:12px;">
-            <!-- TODO : mets une date réelle -->
-            <span class="pill">Statut : en cours</span>
-            <span class="pill">Dernière maj : 2026-02-01</span>
-          </div>
-        </article>
-      </div>
-    </section>
+            <div style="margin-top: 12px">
+              <!-- TODO : mets une date réelle -->
+              <span class="pill">Statut : en cours</span>
+              <span class="pill">Dernière maj : 2026-02-01</span>
+            </div>
+          </article>
+        </div>
+      </section>
 
-    <!-- =========================================================
+      <!-- =========================================================
          CONTEXTE & OBJECTIFS (simple, concret)
          ========================================================= -->
-    <section class="section">
-      <div class="section__title">
-        <h2>Contexte</h2>
-        <p>Pourquoi ce projet existe (et ce qu’il démontre).</p>
-      </div>
+      <section class="section">
+        <div class="section__title">
+          <h2>Contexte</h2>
+          <p>Pourquoi ce projet existe (et ce qu’il démontre).</p>
+        </div>
 
-      <div class="card">
-        <ul class="list">
-          <li>Renforcer les bases Python sur un projet court mais exigeant (qualité, organisation, tests).</li>
-          <li>Produire un livrable “portfolio” facilement vérifiable (repo, README, exécution reproductible).</li>
-          <li>Mettre en pratique un workflow proche projet pro (itérations, backlog, refactor).</li>
-        </ul>
-      </div>
-    </section>
+        <div class="card">
+          <ul class="list">
+            <li>
+              Renforcer les bases Python sur un projet court mais exigeant
+              (qualité, organisation, tests).
+            </li>
+            <li>
+              Produire un livrable “portfolio” facilement vérifiable (repo,
+              README, exécution reproductible).
+            </li>
+            <li>
+              Mettre en pratique un workflow proche projet pro (itérations,
+              backlog, refactor).
+            </li>
+          </ul>
+        </div>
+      </section>
 
-    <!-- =========================================================
+      <!-- =========================================================
          FONCTIONNALITÉS (factuel / sans promesses)
          - Tu peux adapter selon ce que fait ton code
          ========================================================= -->
-    <section class="section">
-      <div class="section__title">
-        <h2>Fonctionnalités</h2>
-        <p>Comportements principaux (à ajuster selon ton implémentation).</p>
-      </div>
-
-      <div class="grid cols-2">
-        <div class="card">
-          <h3 class="card__title">Implémenté</h3>
-          <ul class="list">
-            <!-- TODO : remplace/ajuste selon ton vrai périmètre -->
-            <li>Simulation de lancers de dés (ex : d6, d20, etc.).</li>
-            <li>Gestion d’entrées utilisateur (paramètres de lancer).</li>
-            <li>Affichage d’un résultat exploitable (valeurs, éventuellement total).</li>
-          </ul>
+      <section class="section">
+        <div class="section__title">
+          <h2>Fonctionnalités</h2>
+          <p>Comportements principaux (à ajuster selon ton implémentation).</p>
         </div>
 
-        <div class="card">
-          <h3 class="card__title">À venir</h3>
-          <ul class="list">
-            <!-- TODO : si tu as un backlog, aligne-le ici -->
-            <li>Améliorer l’UX (format des commandes, validation, messages d’erreur).</li>
-            <li>Étendre les options (dés multiples, modificateurs, historique).</li>
-            <li>Renforcer les tests (cas limites, erreurs, non-régressions).</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+        <div class="grid cols-2">
+          <div class="card">
+            <h3 class="card__title">Implémenté</h3>
+            <ul class="list">
+              <!-- TODO : remplace/ajuste selon ton vrai périmètre -->
+              <li>Simulation de lancers de dés (ex : d6, d20, etc.).</li>
+              <li>Gestion d’entrées utilisateur (paramètres de lancer).</li>
+              <li>
+                Affichage d’un résultat exploitable (valeurs, éventuellement
+                total).
+              </li>
+            </ul>
+          </div>
 
-    <!-- =========================================================
+          <div class="card">
+            <h3 class="card__title">À venir</h3>
+            <ul class="list">
+              <!-- TODO : si tu as un backlog, aligne-le ici -->
+              <li>
+                Améliorer l’UX (format des commandes, validation, messages
+                d’erreur).
+              </li>
+              <li>
+                Étendre les options (dés multiples, modificateurs, historique).
+              </li>
+              <li>
+                Renforcer les tests (cas limites, erreurs, non-régressions).
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
          QUALITÉ / TESTS (preuve)
          - L’idée : montrer comment tu garantis la fiabilité
          ========================================================= -->
-    <section class="section">
-      <div class="section__title">
-        <h2>Qualité & tests</h2>
-        <p>Comment le projet est vérifié (à remplir avec tes commandes réelles).</p>
-      </div>
+      <section class="section">
+        <div class="section__title">
+          <h2>Qualité & tests</h2>
+          <p>
+            Comment le projet est vérifié (à remplir avec tes commandes
+            réelles).
+          </p>
+        </div>
 
-      <div class="card">
-        <p class="muted">
-          L’objectif est de pouvoir cloner le dépôt et exécuter les tests facilement.
-          Adapte les commandes ci-dessous à ton README réel.
-        </p>
+        <div class="card">
+          <p class="muted">
+            L’objectif est de pouvoir cloner le dépôt et exécuter les tests
+            facilement. Adapte les commandes ci-dessous à ton README réel.
+          </p>
 
-        <!-- NOTE :
+          <!-- NOTE :
              Si tu n’as pas encore de commandes propres, mets celles de ton README,
              ou garde un bloc "TODO" le temps de stabiliser. -->
-        <pre class="codeblock"><code># Exemple (à adapter)
+          <pre class="codeblock"><code># Exemple (à adapter)
 # 1) Créer un venv
 python -m venv .venv
 # 2) Activer (Windows)
@@ -185,29 +225,30 @@ pip install -r requirements.txt
 # 4) Lancer les tests
 pytest -q</code></pre>
 
-        <p class="muted" style="margin-top:10px;">
-          Si ton projet n’a pas de dépendances externes, tu peux supprimer la ligne requirements.txt.
-        </p>
-      </div>
-    </section>
+          <p class="muted" style="margin-top: 10px">
+            Si ton projet n’a pas de dépendances externes, tu peux supprimer la
+            ligne requirements.txt.
+          </p>
+        </div>
+      </section>
 
-    <!-- =========================================================
+      <!-- =========================================================
          ARCHITECTURE (simple, lisible)
          - Tu peux coller une arborescence réelle plus tard
          ========================================================= -->
-    <section class="section">
-      <div class="section__title">
-        <h2>Architecture</h2>
-        <p>Organisation du code (à compléter quand tu figes la structure).</p>
-      </div>
+      <section class="section">
+        <div class="section__title">
+          <h2>Architecture</h2>
+          <p>Organisation du code (à compléter quand tu figes la structure).</p>
+        </div>
 
-      <div class="card">
-        <p class="muted">
-          L’architecture vise à séparer clairement les responsabilités :
-          logique métier (dés/lancers), entrée/sortie (UI/CLI), et tests.
-        </p>
+        <div class="card">
+          <p class="muted">
+            L’architecture vise à séparer clairement les responsabilités :
+            logique métier (dés/lancers), entrée/sortie (UI/CLI), et tests.
+          </p>
 
-        <pre class="codeblock"><code># Exemple de structure (à adapter)
+          <pre class="codeblock"><code># Exemple de structure (à adapter)
 Dice_Roller_Python/
   src/
     dice_roller/
@@ -217,95 +258,111 @@ Dice_Roller_Python/
   tests/
     test_core.py
   README.md</code></pre>
-      </div>
-    </section>
+        </div>
+      </section>
 
-    <!-- =========================================================
+      <!-- =========================================================
          CAPTURES / VISUELS (preuve rapide)
          ========================================================= -->
-    <section class="section">
-      <div class="section__title">
-        <h2>Captures</h2>
-        <p>Ajoute 1 à 3 visuels maximum (screenshot, schéma, gif). Qualité > quantité.</p>
-      </div>
+      <section class="section">
+        <div class="section__title">
+          <h2>Captures</h2>
+          <p>
+            Ajoute 1 à 3 visuels maximum (screenshot, schéma, gif). Qualité >
+            quantité.
+          </p>
+        </div>
 
-      <!-- NOTE :
+        <!-- NOTE :
            Place tes images dans : /assets/img/projets/dice-roller/
            puis remplace les placeholders ci-dessous. -->
-      <div class="grid cols-3">
-        <div class="card subtle">
-          <img
-            src="../assets/img/portfolio/dice_roller_gui.PNG"
-            alt="Capture Dice Roller — exemple d’exécution"
-            style="width:100%; border-radius:12px;"
-          />
-          <p class="muted" style="margin-top:10px;">Exemple d’exécution (CLI/console ou UI).</p>
-        </div>
+        <div class="grid cols-3">
+          <div class="card subtle">
+            <img
+              src="../assets/img/portfolio/dice_roller_gui.PNG"
+              alt="Capture Dice Roller — exemple d’exécution"
+              style="width: 100%; border-radius: 12px"
+            />
+            <p class="muted" style="margin-top: 10px">
+              Exemple d’exécution (CLI/console ou UI).
+            </p>
+          </div>
 
-        <div class="card subtle">
-          <img
-            src="../assets/img/projets/dice-roller/placeholder-2.png"
-            alt="Capture Dice Roller — structure du dépôt"
-            style="width:100%; border-radius:12px;"
-          />
-          <p class="muted" style="margin-top:10px;">Structure du dépôt / documentation.</p>
-        </div>
+          <div class="card subtle">
+            <img
+              src="../assets/img/portfolio/dice_roller_gui.PNG"
+              alt="Capture Dice Roller — structure du dépôt"
+              style="width: 100%; border-radius: 12px"
+            />
+            <p class="muted" style="margin-top: 10px">
+              Structure du dépôt / documentation.
+            </p>
+          </div>
 
-        <div class="card subtle">
-          <img
-            src="../assets/img/projets/dice-roller/placeholder-3.png"
-            alt="Capture Dice Roller — tests"
-            style="width:100%; border-radius:12px;"
-          />
-          <p class="muted" style="margin-top:10px;">Exécution des tests / preuve qualité.</p>
+          <div class="card subtle">
+            <img
+              src="../assets/img/portfolio/dice_roller_gui.PNG"
+              alt="Capture Dice Roller — tests"
+              style="width: 100%; border-radius: 12px"
+            />
+            <p class="muted" style="margin-top: 10px">
+              Exécution des tests / preuve qualité.
+            </p>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- =========================================================
+      <!-- =========================================================
          LIENS (récap)
          ========================================================= -->
-    <section class="section">
-      <div class="section__title">
-        <h2>Liens</h2>
-        <p>Accès rapide aux ressources.</p>
-      </div>
+      <section class="section">
+        <div class="section__title">
+          <h2>Liens</h2>
+          <p>Accès rapide aux ressources.</p>
+        </div>
 
-      <div class="card">
-        <ul class="list">
-          <li>
-            <a target="_blank" rel="noopener" href="https://github.com/xavier-deguercy/Dice_Roller_Python">
-              Repo GitHub — Dice_Roller_Python
-            </a>
-          </li>
-          <li>
-            <a target="_blank" rel="noopener" href="https://github.com/xavier-deguercy/Dice_Roller_Python#readme">
-              README (installation / usage)
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section>
+        <div class="card">
+          <ul class="list">
+            <li>
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://github.com/xavier-deguercy/Dice_Roller_Python"
+              >
+                Repo GitHub — Dice_Roller_Python
+              </a>
+            </li>
+            <li>
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://github.com/xavier-deguercy/Dice_Roller_Python#readme"
+              >
+                README (installation / usage)
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
 
-    <!-- =========================================================
+      <!-- =========================================================
          NAV PROJETS : faciliter la navigation
          - Tu pourras ajouter "Projet précédent/suivant" plus tard
          ========================================================= -->
-    <section class="section">
-      <div class="card">
-        <div class="actions">
-          <!-- TODO : adapte selon ta home (section projets) -->
-          <a class="btn" href="../index.html#projets">← Retour aux projets</a>
+      <section class="section">
+        <div class="card">
+          <div class="actions">
+            <!-- TODO : adapte selon ta home (section projets) -->
+            <a class="btn" href="../index.html#projets">← Retour aux projets</a>
 
-          <!-- Placeholders pour plus tard -->
-          <!-- <a class="btn ghost" href="projet-suivant.html">Projet suivant →</a> -->
+            <!-- Placeholders pour plus tard -->
+            <!-- <a class="btn ghost" href="#">Projet suivant →</a> -->
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
-  </main>
-
-  <!-- Footer commun injecté -->
-  <div data-include="../partials/footer.html"></div>
-</body>
+    <!-- Footer commun injecté -->
+    <div data-include="../partials/footer.html"></div>
+  </body>
 </html>

@@ -1,141 +1,157 @@
 <!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-  <!-- =========================================================
+    <!-- =========================================================
        TEMPLATE PAGE PROJET
        - Duplique ce fichier et remplis uniquement les blocs "À REMPLIR"
        - Conserve la structure (SEO + cohérence)
        ========================================================= -->
 
-  <!-- À REMPLIR : titre page (court, clair) -->
-  <title>[Nom du projet] — Détails | Xavier Deguercy</title>
+    <!-- À REMPLIR : titre page (court, clair) -->
+    <title>[Nom du projet] — Détails | Xavier Deguercy</title>
 
-  <!-- À REMPLIR : description SEO (150–160 caractères) -->
-  <meta name="description" content="[1 phrase : problème → solution + stack]" />
+    <!-- À REMPLIR : description SEO (150–160 caractères) -->
+    <meta
+      name="description"
+      content="[1 phrase : problème → solution + stack]"
+    />
 
-  <!-- CSS unique du site -->
-  <link rel="stylesheet" href="../css/style.css" />
-  <script src="../js/includes.js" defer></script>
+    <!-- CSS unique du site -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <script src="../js/includes.js" defer></script>
 
-  <!-- (optionnel) Polices comme sur index -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat&display=swap" rel="stylesheet" />
-</head>
+    <!-- (optionnel) Polices comme sur index -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
-  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <body>
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
 
-  <!-- Header commun -->
-  <div data-include="../partials/header.html"></div>
+    <!-- Header commun -->
+    <div data-include="../partials/header.html"></div>
 
-  <main id="contenu" class="container">
-
-    <!-- =========================================================
+    <main id="contenu" class="container">
+      <!-- =========================================================
          HERO PROJET
          ========================================================= -->
-    <section class="section">
-      <div class="section__title">
-        <!-- À REMPLIR -->
-        <h1>[Nom du projet]</h1>
-        <p class="muted">[Sous-titre : 1 ligne max — contexte / objectif]</p>
-      </div>
-
-      <div class="grid cols-2" style="margin-top:14px;">
-        <div class="card">
-          <h2 class="card__title">Résumé</h2>
-          <!-- À REMPLIR : 4–6 lignes -->
-          <p class="muted">
-            [Problème] → [Approche] → [Résultat].  
-            Livrable principal : [API / script / dashboard / site].  
-            Ce projet démontre : [2–3 compétences clés].
-          </p>
-
-          <!-- À REMPLIR : tags stack -->
-          <div class="pills" style="margin-top:12px;">
-            <span class="pill">Python</span>
-            <span class="pill">SQL</span>
-            <span class="pill">FastAPI</span>
-          </div>
-
-          <div class="actions" style="margin-top:12px;">
-            <!-- À REMPLIR -->
-            <a class="btn primary" target="_blank" rel="noopener" href="[URL repo]">Repo GitHub</a>
-            <a class="btn" target="_blank" rel="noopener" href="[URL demo ou doc]">Démo / Docs</a>
-          </div>
-        </div>
-
-        <div class="card">
-          <h2 class="card__title">Points clés</h2>
+      <section class="section">
+        <div class="section__title">
           <!-- À REMPLIR -->
-          <ul class="list">
-            <li>[Ex : Architecture claire (routes/services)]</li>
-            <li>[Ex : Tests / qualité / CI]</li>
-            <li>[Ex : Modélisation / DB / UML]</li>
-          </ul>
+          <h1>[Nom du projet]</h1>
+          <p class="muted">[Sous-titre : 1 ligne max — contexte / objectif]</p>
+        </div>
 
-          <!-- À REMPLIR : statut -->
-          <div style="margin-top:12px;">
-            <span class="pill">Statut : en cours</span>
-            <span class="pill">Dernière maj : 2026-02-01</span>
+        <div class="grid cols-2" style="margin-top: 14px">
+          <div class="card">
+            <h2 class="card__title">Résumé</h2>
+            <!-- À REMPLIR : 4–6 lignes -->
+            <p class="muted">
+              [Problème] → [Approche] → [Résultat]. Livrable principal : [API /
+              script / dashboard / site]. Ce projet démontre : [2–3 compétences
+              clés].
+            </p>
+
+            <!-- À REMPLIR : tags stack -->
+            <div class="pills" style="margin-top: 12px">
+              <span class="pill">Python</span>
+              <span class="pill">SQL</span>
+              <span class="pill">FastAPI</span>
+            </div>
+
+            <div class="actions" style="margin-top: 12px">
+              <!-- À REMPLIR -->
+              <a
+                class="btn primary"
+                target="_blank"
+                rel="noopener"
+                href="[URL repo]"
+                >Repo GitHub</a
+              >
+              <a
+                class="btn"
+                target="_blank"
+                rel="noopener"
+                href="[URL demo ou doc]"
+                >Démo / Docs</a
+              >
+            </div>
+          </div>
+
+          <div class="card">
+            <h2 class="card__title">Points clés</h2>
+            <!-- À REMPLIR -->
+            <ul class="list">
+              <li>[Ex : Architecture claire (routes/services)]</li>
+              <li>[Ex : Tests / qualité / CI]</li>
+              <li>[Ex : Modélisation / DB / UML]</li>
+            </ul>
+
+            <!-- À REMPLIR : statut -->
+            <div style="margin-top: 12px">
+              <span class="pill">Statut : en cours</span>
+              <span class="pill">Dernière maj : 2026-02-01</span>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- =========================================================
+      <!-- =========================================================
          FONCTIONNALITÉS
          ========================================================= -->
-    <section class="section">
-      <div class="section__title">
-        <h2>Fonctionnalités</h2>
-        <p>Ce que fait le projet (et ce qui est prévu).</p>
-      </div>
-
-      <div class="grid cols-2">
-        <div class="card">
-          <h3 class="card__title">Fait</h3>
-          <!-- À REMPLIR -->
-          <ul class="list">
-            <li>[Feature 1]</li>
-            <li>[Feature 2]</li>
-            <li>[Feature 3]</li>
-          </ul>
+      <section class="section">
+        <div class="section__title">
+          <h2>Fonctionnalités</h2>
+          <p>Ce que fait le projet (et ce qui est prévu).</p>
         </div>
 
-        <div class="card">
-          <h3 class="card__title">À venir</h3>
-          <!-- À REMPLIR -->
-          <ul class="list">
-            <li>[Next 1]</li>
-            <li>[Next 2]</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+        <div class="grid cols-2">
+          <div class="card">
+            <h3 class="card__title">Fait</h3>
+            <!-- À REMPLIR -->
+            <ul class="list">
+              <li>[Feature 1]</li>
+              <li>[Feature 2]</li>
+              <li>[Feature 3]</li>
+            </ul>
+          </div>
 
-    <!-- =========================================================
+          <div class="card">
+            <h3 class="card__title">À venir</h3>
+            <!-- À REMPLIR -->
+            <ul class="list">
+              <li>[Next 1]</li>
+              <li>[Next 2]</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
          ARCHITECTURE / APPROCHE
          ========================================================= -->
-    <section class="section">
-      <div class="section__title">
-        <h2>Architecture</h2>
-        <p>Comment c’est structuré (niveau “portfolio”, pas trop long).</p>
-      </div>
+      <section class="section">
+        <div class="section__title">
+          <h2>Architecture</h2>
+          <p>Comment c’est structuré (niveau “portfolio”, pas trop long).</p>
+        </div>
 
-      <div class="card">
-        <!-- À REMPLIR -->
-        <p class="muted">
-          [Ex : Front statique → API FastAPI → DB MySQL.  
-          Couches : routes / services / repositories.  
-          Tests : pytest + httpx.]
-        </p>
+        <div class="card">
+          <!-- À REMPLIR -->
+          <p class="muted">
+            [Ex : Front statique → API FastAPI → DB MySQL. Couches : routes /
+            services / repositories. Tests : pytest + httpx.]
+          </p>
 
-        <!-- Option : bloc arborescence -->
-        <pre class="codeblock"><code>[Ex]
+          <!-- Option : bloc arborescence -->
+          <pre class="codeblock"><code>[Ex]
 /src
   /app
     main.py
@@ -144,59 +160,82 @@
     models/
 tests/
 docker-compose.yml</code></pre>
-      </div>
-    </section>
+        </div>
+      </section>
 
-    <!-- =========================================================
+      <!-- =========================================================
          CAPTURES / VISUELS
          ========================================================= -->
-    <section class="section">
-      <div class="section__title">
-        <h2>Captures</h2>
-        <p>1 à 3 images maximum, qualité > quantité.</p>
-      </div>
-
-      <div class="grid cols-3">
-        <!-- À REMPLIR : place tes screenshots dans assets/img/projets/xxx -->
-        <div class="card subtle">
-          <img src="../assets/img/projets/placeholder-1.png" alt="[Description capture 1]" style="width:100%; border-radius:12px;" />
-          <p class="muted" style="margin-top:10px;">[Légende courte]</p>
+      <section class="section">
+        <div class="section__title">
+          <h2>Captures</h2>
+          <p>1 à 3 images maximum, qualité > quantité.</p>
         </div>
 
-        <div class="card subtle">
-          <img src="../assets/img/projets/placeholder-2.png" alt="[Description capture 2]" style="width:100%; border-radius:12px;" />
-          <p class="muted" style="margin-top:10px;">[Légende courte]</p>
-        </div>
+        <div class="grid cols-3">
+          <!-- À REMPLIR : place tes screenshots dans assets/img/projets/xxx -->
+          <div class="card subtle">
+            <img
+              src="../assets/img/portfolio/dice_roller_gui.PNG"
+              alt="[Description capture 1]"
+              style="width: 100%; border-radius: 12px"
+            />
+            <p class="muted" style="margin-top: 10px">[Légende courte]</p>
+          </div>
 
-        <div class="card subtle">
-          <img src="../assets/img/projets/placeholder-3.png" alt="[Description capture 3]" style="width:100%; border-radius:12px;" />
-          <p class="muted" style="margin-top:10px;">[Légende courte]</p>
-        </div>
-      </div>
-    </section>
+          <div class="card subtle">
+            <img
+              src="../assets/img/portfolio/dice_roller_gui.PNG"
+              alt="[Description capture 2]"
+              style="width: 100%; border-radius: 12px"
+            />
+            <p class="muted" style="margin-top: 10px">[Légende courte]</p>
+          </div>
 
-    <!-- =========================================================
+          <div class="card subtle">
+            <img
+              src="../assets/img/portfolio/dice_roller_gui.PNG"
+              alt="[Description capture 3]"
+              style="width: 100%; border-radius: 12px"
+            />
+            <p class="muted" style="margin-top: 10px">[Légende courte]</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
          LIENS
          ========================================================= -->
-    <section class="section">
-      <div class="section__title">
-        <h2>Liens</h2>
-        <p>Accès rapide aux ressources.</p>
-      </div>
+      <section class="section">
+        <div class="section__title">
+          <h2>Liens</h2>
+          <p>Accès rapide aux ressources.</p>
+        </div>
 
-      <div class="card">
-        <!-- À REMPLIR -->
-        <ul class="list">
-          <li><a href="[URL repo]" target="_blank" rel="noopener">Repo GitHub</a></li>
-          <li><a href="[URL README/doc]" target="_blank" rel="noopener">Documentation / README</a></li>
-          <li><a href="[URL démo]" target="_blank" rel="noopener">Démo (si applicable)</a></li>
-        </ul>
-      </div>
-    </section>
+        <div class="card">
+          <!-- À REMPLIR -->
+          <ul class="list">
+            <li>
+              <a href="[URL repo]" target="_blank" rel="noopener"
+                >Repo GitHub</a
+              >
+            </li>
+            <li>
+              <a href="[URL README/doc]" target="_blank" rel="noopener"
+                >Documentation / README</a
+              >
+            </li>
+            <li>
+              <a href="[URL démo]" target="_blank" rel="noopener"
+                >Démo (si applicable)</a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
 
-  </main>
-
-  <!-- Footer commun -->
-  <div data-include="../partials/footer.html"></div>
-</body>
+    <!-- Footer commun -->
+    <div data-include="../partials/footer.html"></div>
+  </body>
 </html>
