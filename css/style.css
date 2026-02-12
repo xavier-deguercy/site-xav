@@ -191,6 +191,8 @@ a:focus {
 }
 /* UTILITIES */
 .pill {
+  gap: 8px;
+  padding: 8px 12px;
   display: inline-flex;
   align-items: center;
   padding: 5px 10px;
@@ -200,31 +202,43 @@ a:focus {
   color: var(--muted);
 }
 .pill.green {
+  gap: 8px;
+  padding: 8px 12px;
   border-color: rgba(53, 208, 127, 0.35);
   color: rgba(53, 208, 127, 0.95);
   background: rgba(53, 208, 127, 0.08);
 }
 .pill.yellow {
+  gap: 8px;
+  padding: 5px 12px;
   border-color: rgba(249, 186, 0, 0.35);
   color: rgba(249, 186, 0, 0.95);
   background: rgba(249, 186, 0, 0.08);
 }
 .pill.red {
+  gap: 8px;
+  padding: 5px 12px;
   border-color: rgba(255, 80, 80, 0.35);
   color: rgba(255, 80, 80, 0.95);
   background: rgba(255, 80, 80, 0.08);
 }
 .pill.ok {
+  gap: 8px;
+  padding: 5px 12px;
   border-color: rgba(53, 208, 127, 0.35);
   color: rgba(53, 208, 127, 0.95);
   background: rgba(53, 208, 127, 0.08);
 }
 .pill.warn {
+  gap: 8px;
+  padding: 5px 12px;
   border-color: rgba(249, 186, 0, 0.35);
   color: rgba(249, 186, 0, 0.95);
   background: rgba(249, 186, 0, 0.08);
 }
 .pill.purple {
+  gap: 8px;
+  padding: 5px 12px;
   border-color: rgba(186, 103, 249, 0.35);
   color: rgba(186, 103, 249, 0.95);
   background: rgba(186, 103, 249, 0.08);
@@ -312,6 +326,30 @@ a:focus {
   font-size: 28px;
   line-height: 1.15;
 }
+
+/* Espace entre boutons et pills */
+.hero__content .actions {
+  margin-bottom: 16px; /* ajuste à 12/16 si tu veux */
+}
+
+/* Plus besoin de spacer */
+.hero__content .hero-spacer {
+  display: none;
+}
+
+/* Pills : hauteur naturelle + layout */
+.hero__content .pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 80px;
+  /* optionnel si tu préfères une marge ici plutôt que sur .actions */
+  /* margin-top: 14px; */
+}
+
+
+
+
+
 .hero__media {
   display: grid;
   gap: 14px;
