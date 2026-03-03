@@ -1,125 +1,172 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Xavier Deguercy — Portfolio (Data / Dev / Gestion de projet)</title>
-  <meta name="description" content="Portfolio de Xavier Deguercy : projets data (Python/SQL), développement, et pilotage (PMO/CdP). Projets, compétences et contact." />
-  <link rel="stylesheet" href="css/style.css" />
-  <script src="js/includes.js" defer></script> <!-- Script pour inclure les partials (header/footer) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" /> <!-- Préchargement des polices Google Fonts --> 
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> <!-- Préchargement des polices Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat&display=swap" rel="stylesheet" /> <!-- Import des polices Manrope et Montserrat -->
-</head>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolio | Xavier Deguercy</title>
+    <meta
+      name="description"
+      content="Selection de projets de Xavier Deguercy : FastAPI, Python, front statique et documentation."
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="module" src="js/main.js"></script>
+  </head>
+  <body data-nav-context="portfolio.html">
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
 
-<body>
-  <a class="skip-link" href="#contenu">Aller au contenu</a>
-<!-- le header est dans un autre fichier partials/header.html-->
-  <div data-include="partials/header.html"></div>
-
-  <main class="container">
-    <section>
-      <h1>Portfolio</h1>
-      <p style="margin-top: 10px;">
-        Une sélection de projets orientés <strong>pilotage</strong>, <strong>data</strong> et <strong>développement</strong>.
-        Chaque carte vise à répondre rapidement à : <em>qu’est-ce que c’est ?</em> <em>avec quoi ?</em> <em>où voir ?</em>
-      </p>
-
-      <!--
-        project-grid = responsive automatique
-        - tu ajoutes/enlèves des cartes sans toucher au CSS
-      -->
-      <div class="project-grid" style="margin-top: 22px;">
-
-        <!-- =====================================================
-             Projet 1
-             ===================================================== -->
-        <article class="project-card">
-          <h3>Dice Roller (Python)</h3>
-          <p class="project-meta">
-            <span class="pill">Python</span>
-            <span class="pill">POO</span>
-            <span class="pill">Tkinter</span>
-          </p>
-          <p>
-            Mini-projet pour pratiquer la POO, la qualité de code et une IHM simple.
-            Backlog en user stories + itérations.
-          </p>
-          <div class="project-actions">
-            <a class="cta" target="_blank" rel="noopener" href="https://github.com/xavier-deguercy">GitHub</a>
-            <a class="cta" href="#">Détails</a>
-          </div>
-        </article>
-
-        <!-- =====================================================
-             Projet 2
-             ===================================================== -->
-        <article class="project-card">
-          <h3>DIGICHEESE (UML → FastAPI)</h3>
-          <p class="project-meta">
-            <span class="pill">UML</span>
-            <span class="pill">FastAPI</span>
-            <span class="pill">MySQL</span>
-          </p>
-          <p>
-            Exercice Diginamic : modélisation (scénarios, diagrammes) puis socle API.
-            Objectif : passer d’un besoin métier à une base dev exploitable.
-          </p>
-          <div class="project-actions">
-            <a class="cta" target="_blank" rel="noopener" href="https://github.com/xavier-deguercy">GitHub</a>
-            <a class="cta" href="#">Maquettes / UML</a>
-          </div>
-        </article>
-
-        <!-- =====================================================
-             Projet 3
-             ===================================================== -->
-        <article class="project-card">
-          <h3>Portfolio Web (ce site)</h3>
-          <p class="project-meta">
-            <span class="pill">HTML</span>
-            <span class="pill">CSS</span>
-            <span class="pill">GitHub Pages</span>
-          </p>
-          <p>
-            Un site simple, versionné, avec une logique modulaire (partials header/footer)
-            pour éviter les copier-coller.
-          </p>
-          <div class="project-actions">
-            <a class="cta" href="index.html">Voir la home</a>
-            <a class="cta" target="_blank" rel="noopener" href="https://github.com/xavier-deguercy">Repo</a>
-          </div>
-        </article>
-
-        <!-- =====================================================
-             Projet 4
-             ===================================================== -->
-        <article class="project-card">
-          <h3>Maturation Banane (data pipeline)</h3>
-          <p class="project-meta">
-            <span class="pill">Python</span>
-            <span class="pill">SQL</span>
-            <span class="pill">Automatisation</span>
-          </p>
-          <p>
-            Projet d’apprentissage : ingestion/simulation quotidienne, stockage, série temporelle,
-            et éventuellement interface de saisie.
-          </p>
-          <div class="project-actions">
-            <a class="cta" target="_blank" rel="noopener" href="https://github.com/xavier-deguercy">GitHub</a>
-            <a class="cta" href="#">Roadmap</a>
-          </div>
-        </article>
-
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="brand" href="index.html">Xavier Deguercy</a>
+        <nav class="site-nav" aria-label="Navigation principale">
+          <a class="site-nav__link" data-nav-link="index.html" href="index.html">
+            Accueil
+          </a>
+          <a
+            class="site-nav__link"
+            data-nav-link="a-propos.html"
+            href="a-propos.html"
+          >
+            A propos
+          </a>
+          <a
+            class="site-nav__link"
+            data-nav-link="portfolio.html"
+            href="portfolio.html"
+          >
+            Portfolio
+          </a>
+          <a class="site-nav__link site-nav__link--cta" href="index.html#contact">
+            Contact
+          </a>
+        </nav>
       </div>
+    </header>
 
-      <!-- TODO : quand tu veux, je te propose une structure "template de carte" + checklist
-           pour ajouter un projet en 2 minutes (titre, stack, pitch, liens). -->
+    <main id="contenu" class="container">
+      <section class="section">
+        <div class="section__title">
+          <p class="eyebrow">Selection detaillee</p>
+          <h1>Portfolio</h1>
+          <p>
+            Une selection de projets orientes pilotage, data et developpement,
+            presentes avec un angle execution + maintenabilite.
+          </p>
+        </div>
 
-    </section>
-  </main>
+        <div class="project-grid">
+          <article class="project-card">
+            <h2 class="card__title">Dice Roller</h2>
+            <p class="project-meta">
+              <span class="pill">Python</span>
+              <span class="pill">OOP</span>
+              <span class="pill">Tests</span>
+            </p>
+            <p class="muted">
+              Mini-projet de qualite de code: structure, automatisation et
+              demonstration.
+            </p>
+            <div class="project-actions">
+              <a class="btn" href="projets/Projet_Dice_Roller.html">Details</a>
+              <a
+                class="btn ghost"
+                href="https://github.com/xavier-deguercy/Dice_Roller_Python"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub
+              </a>
+            </div>
+          </article>
 
-  <!-- Footer commun -->
-  <div data-include="partials/footer.html"></div>
-</body>
+          <article class="project-card">
+            <h2 class="card__title">DIGICHEESE</h2>
+            <p class="project-meta">
+              <span class="pill">FastAPI</span>
+              <span class="pill">MySQL</span>
+              <span class="pill">Backlog</span>
+            </p>
+            <p class="muted">
+              Projet de groupe axe API, modelisation, tests et documentation de
+              livraison.
+            </p>
+            <div class="project-actions">
+              <a class="btn" href="projets/Projet_DIGICHEESE.html">Details</a>
+              <a
+                class="btn ghost"
+                href="https://github.com/xavier-deguercy/TP_digicheese"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <h2 class="card__title">Portfolio web</h2>
+            <p class="project-meta">
+              <span class="pill">HTML</span>
+              <span class="pill">CSS</span>
+              <span class="pill">ESM</span>
+            </p>
+            <p class="muted">
+              Ce site sert aussi de support de refactor front: structure, design
+              system et documentation.
+            </p>
+            <div class="project-actions">
+              <a class="btn" href="index.html">Voir la home</a>
+              <a
+                class="btn ghost"
+                href="https://github.com/xavier-deguercy/site-xav"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Repo
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <h2 class="card__title">Pipeline data (WIP)</h2>
+            <p class="project-meta">
+              <span class="pill">Python</span>
+              <span class="pill">SQL</span>
+              <span class="pill">Automatisation</span>
+            </p>
+            <p class="muted">
+              Espace reserve pour un prochain chantier d'ingestion et de suivi
+              de donnees.
+            </p>
+            <div class="project-actions">
+              <span class="btn disabled" aria-disabled="true">Contenu a venir</span>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <p class="site-footer__copy">
+          Xavier Deguercy · <span data-current-year>2026</span>
+        </p>
+        <div class="site-footer__links">
+          <a
+            href="https://github.com/xavier-deguercy"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+          <a
+            href="https://www.linkedin.com/in/xavierdeguercy/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

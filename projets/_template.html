@@ -2,240 +2,182 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-
-    <!-- =========================================================
-       TEMPLATE PAGE PROJET
-       - Duplique ce fichier et remplis uniquement les blocs "À REMPLIR"
-       - Conserve la structure (SEO + cohérence)
-       ========================================================= -->
-
-    <!-- À REMPLIR : titre page (court, clair) -->
-    <title>[Nom du projet] — Détails | Xavier Deguercy</title>
-
-    <!-- À REMPLIR : description SEO (150–160 caractères) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Template projet | Xavier Deguercy</title>
     <meta
       name="description"
-      content="[1 phrase : problème → solution + stack]"
+      content="Template de page projet pour ajouter un nouveau detail sans repartir de zero."
     />
-
-    <!-- CSS unique du site -->
     <link rel="stylesheet" href="../css/style.css" />
-    <script src="../js/includes.js" defer></script>
-
-    <!-- (optionnel) Polices comme sur index -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat&display=swap"
-      rel="stylesheet"
-    />
+    <script type="module" src="../js/main.js"></script>
   </head>
-
-  <body>
+  <body data-nav-context="portfolio.html">
     <a class="skip-link" href="#contenu">Aller au contenu</a>
 
-    <!-- Header commun -->
-    <div data-include="../partials/header.html"></div>
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="brand" href="../index.html">Xavier Deguercy</a>
+        <nav class="site-nav" aria-label="Navigation principale">
+          <a
+            class="site-nav__link"
+            data-nav-link="index.html"
+            href="../index.html"
+          >
+            Accueil
+          </a>
+          <a
+            class="site-nav__link"
+            data-nav-link="a-propos.html"
+            href="../a-propos.html"
+          >
+            A propos
+          </a>
+          <a
+            class="site-nav__link"
+            data-nav-link="portfolio.html"
+            href="../portfolio.html"
+          >
+            Portfolio
+          </a>
+          <a class="site-nav__link site-nav__link--cta" href="../index.html#contact">
+            Contact
+          </a>
+        </nav>
+      </div>
+    </header>
 
     <main id="contenu" class="container">
-      <!-- =========================================================
-         HERO PROJET
-         ========================================================= -->
       <section class="section">
         <div class="section__title">
-          <!-- À REMPLIR -->
-          <h1>[Nom du projet]</h1>
-          <p class="muted">[Sous-titre : 1 ligne max — contexte / objectif]</p>
-        </div>
-
-        <div class="grid cols-2" style="margin-top: 14px">
-          <div class="card">
-            <h2 class="card__title">Résumé</h2>
-            <!-- À REMPLIR : 4–6 lignes -->
-            <p class="muted">
-              [Problème] → [Approche] → [Résultat]. Livrable principal : [API /
-              script / dashboard / site]. Ce projet démontre : [2–3 compétences
-              clés].
-            </p>
-
-            <!-- À REMPLIR : tags stack -->
-            <div class="pills" style="margin-top: 12px">
-              <span class="pill">Python</span>
-              <span class="pill">SQL</span>
-              <span class="pill">FastAPI</span>
-            </div>
-
-            <div class="actions" style="margin-top: 12px">
-              <!-- À REMPLIR -->
-              <a
-                class="btn primary"
-                target="_blank"
-                rel="noopener"
-                href="[URL repo]"
-                >Repo GitHub</a
-              >
-              <a
-                class="btn"
-                target="_blank"
-                rel="noopener"
-                href="[URL demo ou doc]"
-                >Démo / Docs</a
-              >
-            </div>
-          </div>
-
-          <div class="card">
-            <h2 class="card__title">Points clés</h2>
-            <!-- À REMPLIR -->
-            <ul class="list">
-              <li>[Ex : Architecture claire (routes/services)]</li>
-              <li>[Ex : Tests / qualité / CI]</li>
-              <li>[Ex : Modélisation / DB / UML]</li>
-            </ul>
-
-            <!-- À REMPLIR : statut -->
-            <div style="margin-top: 12px">
-              <span class="pill">Statut : en cours</span>
-              <span class="pill">Dernière maj : 2026-02-01</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- =========================================================
-         FONCTIONNALITÉS
-         ========================================================= -->
-      <section class="section">
-        <div class="section__title">
-          <h2>Fonctionnalités</h2>
-          <p>Ce que fait le projet (et ce qui est prévu).</p>
+          <p class="eyebrow">Template</p>
+          <h1>Nom du projet</h1>
+          <p>Remplir ce bloc avec le contexte et le resultat attendu.</p>
         </div>
 
         <div class="grid cols-2">
-          <div class="card">
-            <h3 class="card__title">Fait</h3>
-            <!-- À REMPLIR -->
-            <ul class="list">
-              <li>[Feature 1]</li>
-              <li>[Feature 2]</li>
-              <li>[Feature 3]</li>
-            </ul>
-          </div>
+          <article class="card">
+            <h2 class="card__title">Resume</h2>
+            <p class="muted">
+              Decrire ici le probleme, l'approche retenue et le livrable
+              principal.
+            </p>
+            <div class="pills">
+              <span class="pill">Stack 1</span>
+              <span class="pill">Stack 2</span>
+              <span class="pill">Stack 3</span>
+            </div>
+            <div class="actions">
+              <span class="btn disabled" aria-disabled="true">Remplacer par le repo</span>
+              <span class="btn disabled" aria-disabled="true">
+                Remplacer par la doc ou la demo
+              </span>
+            </div>
+          </article>
 
-          <div class="card">
-            <h3 class="card__title">À venir</h3>
-            <!-- À REMPLIR -->
+          <article class="card">
+            <h2 class="card__title">Points cles</h2>
             <ul class="list">
-              <li>[Next 1]</li>
-              <li>[Next 2]</li>
+              <li>Architecture ou choix technique majeur.</li>
+              <li>Preuve de qualite, tests ou documentation.</li>
+              <li>Perimetre ou resultat attendu.</li>
             </ul>
-          </div>
+          </article>
         </div>
       </section>
 
-      <!-- =========================================================
-         ARCHITECTURE / APPROCHE
-         ========================================================= -->
+      <section class="section">
+        <div class="section__title">
+          <h2>Fonctionnalites</h2>
+          <p>Separer ce qui est en place de ce qui reste a faire.</p>
+        </div>
+        <div class="grid cols-2">
+          <article class="card">
+            <h3 class="card__title">Fait</h3>
+            <ul class="list">
+              <li>Feature 1</li>
+              <li>Feature 2</li>
+              <li>Feature 3</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3 class="card__title">A venir</h3>
+            <ul class="list">
+              <li>Prochaine iteration 1</li>
+              <li>Prochaine iteration 2</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
       <section class="section">
         <div class="section__title">
           <h2>Architecture</h2>
-          <p>Comment c’est structuré (niveau “portfolio”, pas trop long).</p>
+          <p>Decrire ici la structure du projet a un niveau portfolio.</p>
         </div>
-
         <div class="card">
-          <!-- À REMPLIR -->
-          <p class="muted">
-            [Ex : Front statique → API FastAPI → DB MySQL. Couches : routes /
-            services / repositories. Tests : pytest + httpx.]
-          </p>
-
-          <!-- Option : bloc arborescence -->
-          <pre class="codeblock"><code>[Ex]
-/src
-  /app
-    main.py
-    routes/
-    services/
-    models/
-tests/
-docker-compose.yml</code></pre>
+          <pre class="codeblock"><code>projet/
+  src/
+  tests/
+  README.md</code></pre>
         </div>
       </section>
 
-      <!-- =========================================================
-         CAPTURES / VISUELS
-         ========================================================= -->
       <section class="section">
         <div class="section__title">
           <h2>Captures</h2>
-          <p>1 à 3 images maximum, qualité > quantité.</p>
+          <p>Ajouter un visuel propre et une legende concise.</p>
         </div>
-
-        <div class="grid cols-3">
-          <!-- À REMPLIR : place tes screenshots dans assets/img/projets/xxx -->
-          <div class="card subtle">
+        <div class="media-grid">
+          <figure class="card card--muted media-card">
             <img
+              class="media-card__image"
               src="../assets/img/portfolio/dice_roller_gui.PNG"
-              alt="[Description capture 1]"
-              style="width: 100%; border-radius: 12px"
+              alt="Placeholder visuel"
+              width="120"
+              height="120"
             />
-            <p class="muted" style="margin-top: 10px">[Légende courte]</p>
-          </div>
-
-          <div class="card subtle">
-            <img
-              src="../assets/img/portfolio/dice_roller_gui.PNG"
-              alt="[Description capture 2]"
-              style="width: 100%; border-radius: 12px"
-            />
-            <p class="muted" style="margin-top: 10px">[Légende courte]</p>
-          </div>
-
-          <div class="card subtle">
-            <img
-              src="../assets/img/portfolio/dice_roller_gui.PNG"
-              alt="[Description capture 3]"
-              style="width: 100%; border-radius: 12px"
-            />
-            <p class="muted" style="margin-top: 10px">[Légende courte]</p>
-          </div>
+            <figcaption class="caption">Remplacer ce visuel par une capture ciblee.</figcaption>
+          </figure>
         </div>
       </section>
 
-      <!-- =========================================================
-         LIENS
-         ========================================================= -->
       <section class="section">
         <div class="section__title">
           <h2>Liens</h2>
-          <p>Accès rapide aux ressources.</p>
+          <p>Remplacer les placeholders avant publication.</p>
         </div>
-
         <div class="card">
-          <!-- À REMPLIR -->
-          <ul class="list">
-            <li>
-              <a href="[URL repo]" target="_blank" rel="noopener"
-                >Repo GitHub</a
-              >
-            </li>
-            <li>
-              <a href="[URL README/doc]" target="_blank" rel="noopener"
-                >Documentation / README</a
-              >
-            </li>
-            <li>
-              <a href="[URL démo]" target="_blank" rel="noopener"
-                >Démo (si applicable)</a
-              >
-            </li>
-          </ul>
+          <div class="actions">
+            <span class="btn disabled" aria-disabled="true">Repo a renseigner</span>
+            <span class="btn disabled" aria-disabled="true">Doc a renseigner</span>
+            <a class="btn ghost" href="../portfolio.html">Retour au portfolio</a>
+          </div>
         </div>
       </section>
     </main>
 
-    <!-- Footer commun -->
-    <div data-include="../partials/footer.html"></div>
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <p class="site-footer__copy">
+          Xavier Deguercy · <span data-current-year>2026</span>
+        </p>
+        <div class="site-footer__links">
+          <a
+            href="https://github.com/xavier-deguercy"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+          <a
+            href="https://www.linkedin.com/in/xavierdeguercy/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

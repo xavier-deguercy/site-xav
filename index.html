@@ -2,251 +2,273 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Xavier Deguercy — Portfolio (Data / Dev / Gestion de projet)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Xavier Deguercy | Portfolio data, dev et pilotage</title>
     <meta
       name="description"
-      content="Portfolio de Xavier Deguercy : projets data (Python/SQL), développement, et pilotage (PMO/CdP). Projets, compétences et contact."
+      content="Portfolio de Xavier Deguercy : projets data, developpement, pilotage et documentation."
     />
     <link rel="stylesheet" href="css/style.css" />
-    <script src="js/includes.js" defer></script>
-    <!-- Script pour inclure les partials (header/footer) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <!-- Préchargement des polices Google Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <!-- Préchargement des polices Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Import des polices Manrope et Montserrat -->
+    <script type="module" src="js/main.js"></script>
   </head>
-
   <body>
     <a class="skip-link" href="#contenu">Aller au contenu</a>
-    <!-- le header est dans un autre fichier partials/header.html-->
-    <div data-include="partials/header.html"></div>
+
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="brand" href="index.html">Xavier Deguercy</a>
+        <nav class="site-nav" aria-label="Navigation principale">
+          <a class="site-nav__link" data-nav-link="index.html" href="index.html">
+            Accueil
+          </a>
+          <a
+            class="site-nav__link"
+            data-nav-link="a-propos.html"
+            href="a-propos.html"
+          >
+            A propos
+          </a>
+          <a
+            class="site-nav__link"
+            data-nav-link="portfolio.html"
+            href="portfolio.html"
+          >
+            Portfolio
+          </a>
+          <a class="site-nav__link site-nav__link--cta" href="#contact">
+            Contact
+          </a>
+        </nav>
+      </div>
+    </header>
 
     <main id="contenu" class="container">
-      <!-- HERO -->
       <section class="hero">
-        <div class="hero__content">
-          <h1>Je conçois et livre des solutions data & applicatives</h1>
+        <div class="hero__content card">
+          <p class="eyebrow">Profil hybride</p>
+          <h1>Je concois et livre des solutions data et applicatives</h1>
           <p class="lead">
-            Profil hybride : pilotage (PMO/CdP) + montée en compétences
-            dev/data. J’aime les systèmes propres : architecture, API, bases,
-            automatisation.
+            Pilotage (PMO/Chef de projet) et montee en competences dev/data :
+            j'avance avec des systemes propres, documentes et demonstrables.
           </p>
 
           <div class="actions">
             <a class="btn primary" href="#projets">Voir mes projets</a>
             <a class="btn" href="#contact">Me contacter</a>
-            <!-- Remplace par ton fichier si tu ajoutes un PDF -->
-            <a class="btn ghost" href="assets/docs/CV_Xavier_Deguercy.pdf"
-              >Télécharger mon CV</a
-            >
+            <a class="btn ghost" href="assets/docs/CV_Xavier_Deguercy.pdf">
+              Telecharger mon CV
+            </a>
           </div>
-          
-          <p class="lead">  Compétences fonctionnelles</p>
-          <div class="pills">
-            <span class="pill yellow">PMO / Chef de projet</span>
-            <span class="pill green">Data engineering</span>
-            <span class="pill purple">Développement</span>
-          </div>
-          <div class="hero-spacer" aria-hidden="true"></div>
 
-          <p class="lead"> Compétences techniques</p>
-          <div class="pills">
-            <span class="pill purple">Python</span>
-            <span class="pill">SQL</span>
-            <span class="pill">FastAPI</span>
-            <span class="pill">Git/GitHub</span>
-            <span class="pill">UML</span>
-            <span class="pill">HTML/CSS</span>
+          <div class="content-stack">
+            <div>
+              <p class="section-note">Competences fonctionnelles</p>
+              <div class="pills">
+                <span class="pill pill--accent">PMO / Chef de projet</span>
+                <span class="pill pill--success">Data engineering</span>
+                <span class="pill pill--violet">Developpement</span>
+              </div>
+            </div>
+
+            <div>
+              <p class="section-note">Competences techniques</p>
+              <div class="pills">
+                <span class="pill">Python</span>
+                <span class="pill">SQL</span>
+                <span class="pill">FastAPI</span>
+                <span class="pill">Git/GitHub</span>
+                <span class="pill">UML</span>
+                <span class="pill">HTML/CSS/JS</span>
+              </div>
+            </div>
           </div>
         </div>
 
         <div class="hero__media">
-          <div class="avatar">
+          <figure class="avatar card">
             <img
               src="assets/img/xavier_deguercy.png"
               alt="Portrait de Xavier Deguercy"
+              width="408"
+              height="408"
             />
-          </div>
-          <div class="card subtle">
+          </figure>
+
+          <div class="card card--muted">
             <p class="muted">
-              Basé à Montpellier • Ouvert : alternance / missions / projets •
-              Focus : data engineering & dev.
+              Base a Montpellier. Ouvert aux missions, projets et opportunites
+              d'alternance autour de la data et du developpement.
             </p>
           </div>
         </div>
       </section>
 
-      <!-- PROJETS -->
       <section id="projets" class="section">
         <div class="section__title">
+          <p class="eyebrow">Selection</p>
           <h2>Projets</h2>
-          <p>Une sélection de livrables concrets (code, docs, maquettes).</p>
+          <p>Des livrables concrets : code, documentation et pages projet.</p>
         </div>
 
         <div class="grid cols-3">
-          <!-- Projet 1 -->
           <article class="card">
             <div class="row">
-              <h3 class="card__title">DIGICHEESE — Gestion colis</h3>
-              <span class="pill yellow">UML + UI</span>
+              <h3 class="card__title">DIGICHEESE</h3>
+              <span class="pill pill--accent">UML + API</span>
             </div>
             <p class="muted">
-              Scénarios, diagrammes, maquettes web “pro” (style dashboard), base
-              pour API.
+              Refonte d'un SI legacy vers une API FastAPI + MySQL, avec backlog,
+              tests et documentation.
             </p>
             <div class="actions">
-              <a class="btn" href="portfolio.html">Voir</a>
-              <a class="btn ghost" href="#">Repo</a>
+              <a class="btn" href="projets/Projet_DIGICHEESE.html">Voir</a>
+              <a
+                class="btn ghost"
+                href="https://github.com/xavier-deguercy/TP_digicheese"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Repo
+              </a>
             </div>
           </article>
 
-          <!-- Dice Roller -->
           <article class="card">
             <div class="row">
-              <h3 class="card__title">Dice Roller (Python)</h3>
-              <span class="pill green">Python</span>
+              <h3 class="card__title">Dice Roller</h3>
+              <span class="pill pill--success">Python</span>
             </div>
             <p class="muted">
-              CLI + GUI, backlog user stories, OOP, tests, release propre.
+              Mini-projet Python oriente qualite de code : CLI, GUI, backlog,
+              tests et README reproductible.
             </p>
             <div class="actions">
-              <a class="btn" href="projets/Projet_Dice_Roller.html">Démo</a>
+              <a class="btn" href="projets/Projet_Dice_Roller.html">Voir</a>
               <a
                 class="btn ghost"
                 href="https://github.com/xavier-deguercy/Dice_Roller_Python"
-                >Repo</a
+                target="_blank"
+                rel="noopener noreferrer"
               >
+                Repo
+              </a>
             </div>
           </article>
-          <!-- Projet 3 -->
+
           <article class="card">
             <div class="row">
-              <!--<h3 class="card__title">Maturation banane — Data pipeline</h3>-->
-              <h3 class="card__title">WIP</h3>
-              <span class="pill purple">Data</span>
-              <span class="pill green">Python</span>
-              <span class="pill yellow">UML + UI</span>
+              <h3 class="card__title">Pipeline data (WIP)</h3>
+              <span class="pill pill--violet">A venir</span>
             </div>
-            <p class="muted">WIP</p>
-            <!--<p class="muted">
-              Ingestion quotidienne (simulée), stockage, série temporelle,
-              automatisation.
-            </p>-->
+            <p class="muted">
+              Chantier reserve pour un prochain projet oriente ingestion,
+              stockage et automatisation.
+            </p>
             <div class="actions">
-              <a class="btn" href="#">Détails</a>
-              <a class="btn ghost" href="#">Repo</a>
+              <span class="btn disabled" aria-disabled="true">En preparation</span>
             </div>
           </article>
         </div>
       </section>
 
-      <!-- COMPETENCES -->
       <section id="competences" class="section">
         <div class="section__title">
-          <h2>Compétences</h2>
-          <p>Ce que je mets en œuvre aujourd’hui (et ce que je consolide).</p>
+          <p class="eyebrow">Capacites</p>
+          <h2>Competences</h2>
+          <p>Ce que je mets en oeuvre aujourd'hui et ce que je consolide.</p>
         </div>
 
         <div class="grid cols-2">
-          <div class="card">
-            <h3 class="card__title">Data / Dev</h3>
+          <article class="card">
+            <h3 class="card__title">Data et developpement</h3>
             <ul class="list">
-              <li>Python (scripts, OOP, automatisation)</li>
-              <li>SQL (modélisation, requêtes, base)</li>
-              <li>API REST (FastAPI), structuration routes/services</li>
-              <li>Git/GitHub, conventions, README, issues</li>
+              <li>Python pour scripts, outillage et logique metier.</li>
+              <li>SQL pour modelisation, requetes et base de donnees.</li>
+              <li>APIs REST FastAPI, separation routes/services.</li>
+              <li>Git/GitHub, conventions et documentation de livraison.</li>
             </ul>
-          </div>
+          </article>
 
-          <div class="card">
+          <article class="card">
             <h3 class="card__title">Pilotage</h3>
             <ul class="list">
-              <li>Cadrage, planning, risques, reporting</li>
-              <li>Gouvernance, comités, portefeuille projets</li>
-              <li>Animation ateliers (MOA/MOE), conduite du changement</li>
-              <li>Documentation & communication claire</li>
+              <li>Cadrage, planning, risques et reporting.</li>
+              <li>Gouvernance, comites et portefeuille de projets.</li>
+              <li>Animation d'ateliers MOA/MOE et conduite du changement.</li>
+              <li>Documentation claire et communication orientee resultat.</li>
             </ul>
-          </div>
+          </article>
         </div>
       </section>
 
-      <!-- PARCOURS -->
       <section id="parcours" class="section">
         <div class="section__title">
-          <h2>Parcours</h2>
-          <p>Expérience + formation (version courte).</p>
+          <p class="eyebrow">Parcours</p>
+          <h2>Repere rapide</h2>
+          <p>Version courte du parcours professionnel et de formation.</p>
         </div>
 
         <div class="card">
           <ul class="timeline">
             <li>
-              <span class="timeline__date">Aujourd’hui</span> Formation Data
-              Engineering & IA (Bac+5)
+              <span class="timeline__date">Aujourd'hui</span>
+              Formation data engineering et IA (Bac+5)
             </li>
             <li>
-              <span class="timeline__date">10+ ans</span> Chef de projet / PMO
-              (SI, gouvernance, portefeuille)
+              <span class="timeline__date">10+ ans</span>
+              Chef de projet / PMO sur des sujets SI et gouvernance
             </li>
             <li>
-              <span class="timeline__date">Avant</span> Recherche scientifique
-              (rigueur, expérimentation, data)
+              <span class="timeline__date">Avant</span>
+              Recherche scientifique, rigueur et experimentation
             </li>
           </ul>
         </div>
       </section>
 
-      <!-- CONTACT -->
       <section id="contact" class="section">
         <div class="section__title">
-          <h2>Contact</h2>
-          <p>Le plus simple : un message LinkedIn ou un mail.</p>
+          <p class="eyebrow">Contact</p>
+          <h2>Entrer en relation</h2>
+          <p>Le plus simple : LinkedIn ou un email direct.</p>
         </div>
 
         <div class="grid cols-2">
-          <div class="card">
-            <h3 class="card__title">Liens</h3>
+          <article class="card">
+            <h3 class="card__title">Liens directs</h3>
             <div class="actions">
-              <a class="btn primary" href="mailto:xavier.deguercy@gmail.com"
-                >xavier.deguercy@gmail.com</a
-              >
+              <a class="btn primary" href="mailto:xavier.deguercy@gmail.com">
+                xavier.deguercy@gmail.com
+              </a>
               <a
                 class="btn"
                 href="https://github.com/xavier-deguercy"
                 target="_blank"
                 rel="noopener noreferrer"
-                >GitHub</a
               >
+                GitHub
+              </a>
               <a
                 class="btn"
                 href="https://www.linkedin.com/in/xavierdeguercy/"
                 target="_blank"
                 rel="noopener noreferrer"
-                >LinkedIn</a
               >
+                LinkedIn
+              </a>
             </div>
-            <p class="muted" style="margin-top: 10px">
-              Astuce : ajoute aussi une section “Disponibilité”
-              (alternance/mission) + ton rythme.
+            <p class="section-note muted">
+              Disponibilite et rythme peuvent etre detailles sur demande selon le
+              type de mission.
             </p>
-          </div>
+          </article>
 
-          <div class="card">
+          <article class="card">
             <h3 class="card__title">Message rapide</h3>
-            <form class="form" action="#" method="post">
+            <form class="form-card" action="#" method="post">
               <div class="field">
                 <label for="nom">Nom</label>
-                <input
-                  id="nom"
-                  name="nom"
-                  type="text"
-                  placeholder="Votre nom"
-                />
+                <input id="nom" name="nom" type="text" placeholder="Votre nom" />
               </div>
               <div class="field">
                 <label for="msg">Message</label>
@@ -254,25 +276,43 @@
                   id="msg"
                   name="msg"
                   rows="4"
-                  placeholder="Votre message…"
+                  placeholder="Votre message"
                 ></textarea>
               </div>
               <div class="actions">
                 <button class="btn disabled" type="button" aria-disabled="true">
-                  Envoyer (démo)
+                  Envoyer (demo)
                 </button>
-                <span class="pill">Formulaire décoratif</span>
+                <span class="pill">Formulaire decoratif</span>
               </div>
             </form>
-          </div>
+          </article>
         </div>
       </section>
-
-      <div data-include="partials/footer.html"></div>
     </main>
 
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <p class="site-footer__copy">
+          Xavier Deguercy · <span data-current-year>2026</span>
+        </p>
+        <div class="site-footer__links">
+          <a
+            href="https://github.com/xavier-deguercy"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+          <a
+            href="https://www.linkedin.com/in/xavierdeguercy/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

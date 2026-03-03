@@ -2,34 +2,93 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Xavier Deguercy - Lab</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lab | Xavier Deguercy</title>
     <meta
       name="description"
-      content="Zone de laboratoire pour prototypes et tests UI du portfolio de Xavier Deguercy."
+      content="Zone de test visuelle pour verifier les composants du portfolio."
     />
     <link rel="stylesheet" href="../css/style.css" />
-    <script src="../js/includes.js" defer></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat&display=swap"
-      rel="stylesheet"
-    />
+    <script type="module" src="../js/main.js"></script>
   </head>
   <body>
     <a class="skip-link" href="#contenu">Aller au contenu</a>
-    <div data-include="../partials/header.html"></div>
+
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="brand" href="../index.html">Xavier Deguercy</a>
+        <nav class="site-nav" aria-label="Navigation principale">
+          <a
+            class="site-nav__link"
+            data-nav-link="index.html"
+            href="../index.html"
+          >
+            Accueil
+          </a>
+          <a
+            class="site-nav__link"
+            data-nav-link="a-propos.html"
+            href="../a-propos.html"
+          >
+            A propos
+          </a>
+          <a
+            class="site-nav__link"
+            data-nav-link="portfolio.html"
+            href="../portfolio.html"
+          >
+            Portfolio
+          </a>
+          <a class="site-nav__link site-nav__link--cta" href="../index.html#contact">
+            Contact
+          </a>
+        </nav>
+      </div>
+    </header>
 
     <main id="contenu" class="container">
       <section class="section">
         <div class="section__title">
-          <h2>Lab</h2>
-          <p>Zone de test pour les composants et variations visuelles.</p>
+          <p class="eyebrow">Sandbox</p>
+          <h1>Lab</h1>
+          <p>
+            Zone de verification reservee aux essais visuels et aux composants
+            en cours de stabilisation.
+          </p>
+        </div>
+
+        <div class="card">
+          <ul class="list">
+            <li>Tester une variation de mise en page sans toucher aux pages publiques.</li>
+            <li>Verifier un composant avant integration sur la home ou le portfolio.</li>
+            <li>Conserver un espace d'experimentation hors navigation principale.</li>
+          </ul>
         </div>
       </section>
     </main>
 
-    <div data-include="../partials/footer.html"></div>
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <p class="site-footer__copy">
+          Xavier Deguercy · <span data-current-year>2026</span>
+        </p>
+        <div class="site-footer__links">
+          <a
+            href="https://github.com/xavier-deguercy"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+          <a
+            href="https://www.linkedin.com/in/xavierdeguercy/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

@@ -1,56 +1,155 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>A propos | Xavier Deguercy</title>
+    <meta
+      name="description"
+      content="A propos de Xavier Deguercy : profil hybride, parcours et axes de recherche."
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="module" src="js/main.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Xavier Deguercy — Portfolio (Data / Dev / Gestion de projet)</title>
-  <meta name="description" content="Portfolio de Xavier Deguercy : projets data (Python/SQL), développement, et pilotage (PMO/CdP). Projets, compétences et contact." />
-  <link rel="stylesheet" href="css/style.css" />
-  <script src="js/includes.js" defer></script> <!-- Script pour inclure les partials (header/footer) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" /> <!-- Préchargement des polices Google Fonts --> 
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> <!-- Préchargement des polices Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat&display=swap" rel="stylesheet" /> <!-- Import des polices Manrope et Montserrat -->
-</head>
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="brand" href="index.html">Xavier Deguercy</a>
+        <nav class="site-nav" aria-label="Navigation principale">
+          <a class="site-nav__link" data-nav-link="index.html" href="index.html">
+            Accueil
+          </a>
+          <a
+            class="site-nav__link"
+            data-nav-link="a-propos.html"
+            href="a-propos.html"
+          >
+            A propos
+          </a>
+          <a
+            class="site-nav__link"
+            data-nav-link="portfolio.html"
+            href="portfolio.html"
+          >
+            Portfolio
+          </a>
+          <a class="site-nav__link site-nav__link--cta" href="index.html#contact">
+            Contact
+          </a>
+        </nav>
+      </div>
+    </header>
 
-<body>
-  <a class="skip-link" href="#contenu">Aller au contenu</a>
-<!-- le header est dans un autre fichier partials/header.html-->
-  <div data-include="partials/header.html"></div>
-    
-    <main class="a-propos-main">
+    <main id="contenu" class="container">
+      <section class="section">
+        <div class="section__title">
+          <p class="eyebrow">Positionnement</p>
+          <h1>A propos</h1>
+          <p>
+            Je relie pilotage, documentation et execution technique sur des
+            sujets data et applicatifs.
+          </p>
+        </div>
 
-        <section>
-            <h1>À propos</h1>
-            <div class="carre-contenu">
-                <p>
-                    Photographe depuis plus de 5 ans, je réalise des reportages aux photos dynamiques et pertinentes
-                    pour
-                    vos
-                    projets de communication. Créativité, qualité, et sérénité pour vous! Je gère tout, depuis la
-                    direction
-                    artistique, la réalisation du reportage jusqu’à la livraison de vos photos retouchées, prêtes à
-                    l’emploi.
-                </p>
-                <h2>Services</h2>
-                <ul>
-                    <li>Portrait seul ou à plusieurs</li>
-                    <li>Shooting mode</li>
-                    <li>Retouches sur mesure</li>
-                    <li>Développement</li>
-                </ul>
-            </div>
-            <div>
-                <a href="portfolio.html" class="cta">VOIR MON PORTFOLIO</a>
-            </div>
-        </section>
+        <div class="grid cols-2">
+          <article class="card">
+            <h2 class="card__title">Ce que j'apporte</h2>
+            <ul class="list">
+              <li>Une base solide en cadrage, planification et gestion des risques.</li>
+              <li>Une approche structuree pour la documentation et la transmission.</li>
+              <li>Une montee en puissance continue sur Python, SQL et APIs.</li>
+              <li>Une attention constante a la lisibilite des livrables.</li>
+            </ul>
+          </article>
 
+          <article class="card">
+            <h2 class="card__title">Ce que je consolide</h2>
+            <ul class="list">
+              <li>Architecture d'applications simples et maintenables.</li>
+              <li>Data engineering, automatisation et APIs REST.</li>
+              <li>Qualite logicielle: tests, conventions et refactor incremental.</li>
+              <li>Demonstration de projets via documentation et pages portfolio.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
 
+      <section class="section">
+        <div class="section__title">
+          <p class="eyebrow">Parcours</p>
+          <h2>Repere</h2>
+          <p>Une synthese courte du parcours et de la transition actuelle.</p>
+        </div>
+
+        <div class="card">
+          <ul class="timeline">
+            <li>
+              <span class="timeline__date">Aujourd'hui</span>
+              Formation data engineering et IA avec objectif de livrables
+              demonstrables
+            </li>
+            <li>
+              <span class="timeline__date">10+ ans</span>
+              Experience en PMO et chefferie de projet sur des environnements SI
+            </li>
+            <li>
+              <span class="timeline__date">Avant</span>
+              Recherche scientifique, analyse et experimentation
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section__title">
+          <p class="eyebrow">Cap suivant</p>
+          <h2>Ce que je cherche</h2>
+          <p>
+            Des contextes ou la rigueur projet et la technique ont besoin de se
+            renforcer mutuellement.
+          </p>
+        </div>
+
+        <div class="card">
+          <p class="muted">
+            Je privilegie les missions ou l'on attend a la fois un cadre clair,
+            des livrables propres et une execution fiable cote front, data ou
+            outillage.
+          </p>
+          <div class="actions">
+            <a class="btn primary" href="portfolio.html">Voir les projets</a>
+            <a class="btn ghost" href="assets/docs/CV_Xavier_Deguercy.pdf">
+              Ouvrir le CV
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
 
-
-    
-<div data-include="partials/footer.html"></div>
-</body>
-
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <p class="site-footer__copy">
+          Xavier Deguercy · <span data-current-year>2026</span>
+        </p>
+        <div class="site-footer__links">
+          <a
+            href="https://github.com/xavier-deguercy"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+          <a
+            href="https://www.linkedin.com/in/xavierdeguercy/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

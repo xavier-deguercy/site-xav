@@ -1,33 +1,100 @@
 <!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Xavier Deguercy — Portfolio (Data / Dev / Gestion de projet)</title>
-  <meta name="description" content="Portfolio de Xavier Deguercy : projets data (Python/SQL), développement, et pilotage (PMO/CdP). Projets, compétences et contact." />
-  <link rel="stylesheet" href="css/style.css" />
-  <script src="js/includes.js" defer></script> <!-- Script pour inclure les partials (header/footer) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" /> <!-- Préchargement des polices Google Fonts --> 
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> <!-- Préchargement des polices Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat&display=swap" rel="stylesheet" /> <!-- Import des polices Manrope et Montserrat -->
-</head>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Widgets | Xavier Deguercy</title>
+    <meta
+      name="description"
+      content="Page utilitaire pour verifier les composants visuels du portfolio."
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="module" src="js/main.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
 
-<body>
-  <a class="skip-link" href="#contenu">Aller au contenu</a>
-<!-- le header est dans un autre fichier partials/header.html-->
-  <div data-include="partials/header.html"></div>
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="brand" href="index.html">Xavier Deguercy</a>
+        <nav class="site-nav" aria-label="Navigation principale">
+          <a class="site-nav__link" data-nav-link="index.html" href="index.html">
+            Accueil
+          </a>
+          <a
+            class="site-nav__link"
+            data-nav-link="a-propos.html"
+            href="a-propos.html"
+          >
+            A propos
+          </a>
+          <a
+            class="site-nav__link"
+            data-nav-link="portfolio.html"
+            href="portfolio.html"
+          >
+            Portfolio
+          </a>
+          <a class="site-nav__link site-nav__link--cta" href="index.html#contact">
+            Contact
+          </a>
+        </nav>
+      </div>
+    </header>
 
-  <main id="contenu" class="container">
-    <section class="widget">
-      <h2>Widgets</h2>
-      <p>Contenu des widgets ici.</p>
-    </section>
-  </main>
-  
-</body>
+    <main id="contenu" class="container">
+      <section class="section">
+        <div class="section__title">
+          <p class="eyebrow">Page utilitaire</p>
+          <h1>Widgets</h1>
+          <p>Verification rapide des composants partages du site.</p>
+        </div>
 
-<footer>
-  <div data-include="partials/footer.html"></div>
-</footer>
+        <div class="grid cols-2">
+          <article class="card">
+            <h2 class="card__title">Actions</h2>
+            <div class="actions">
+              <a class="btn primary" href="portfolio.html">Primaire</a>
+              <a class="btn" href="a-propos.html">Secondaire</a>
+              <span class="btn ghost">Ghost</span>
+            </div>
+          </article>
 
+          <article class="card">
+            <h2 class="card__title">Badges</h2>
+            <div class="pills">
+              <span class="pill">Defaut</span>
+              <span class="pill pill--success">Success</span>
+              <span class="pill pill--accent">Accent</span>
+              <span class="pill pill--violet">Violet</span>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <p class="site-footer__copy">
+          Xavier Deguercy · <span data-current-year>2026</span>
+        </p>
+        <div class="site-footer__links">
+          <a
+            href="https://github.com/xavier-deguercy"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+          <a
+            href="https://www.linkedin.com/in/xavierdeguercy/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
